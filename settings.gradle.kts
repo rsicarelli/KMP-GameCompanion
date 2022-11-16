@@ -27,3 +27,5 @@ pluginManagement {
         id("com.arkivanov.gradle.setup")
     }
 }
+
+include(":collection")
