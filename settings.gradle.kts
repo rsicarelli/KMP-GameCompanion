@@ -1,4 +1,8 @@
-enableFeaturePreview("VERSION_CATALOGS")
+import org.gradle.api.internal.FeaturePreviews.Feature.TYPESAFE_PROJECT_ACCESSORS
+import org.gradle.api.internal.FeaturePreviews.Feature.VERSION_CATALOGS
+
+enableFeaturePreview(VERSION_CATALOGS.name)
+enableFeaturePreview(TYPESAFE_PROJECT_ACCESSORS.name)
 
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {

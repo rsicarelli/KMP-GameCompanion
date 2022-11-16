@@ -3,6 +3,7 @@ import com.arkivanov.gradle.dependsOn
 import com.arkivanov.gradle.iosCompat
 import com.arkivanov.gradle.setupMultiplatform
 import com.arkivanov.gradle.setupSourceSets
+import org.gradle.api.internal.artifacts.dependencies.DefaultDependencyConstraint.strictly
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.konan.target.Family
 
@@ -30,8 +31,7 @@ kotlin {
             it.binaries {
                 framework {
                     baseName = "Shared"
-                    export(deps.decompose)
-                    export(deps.essenty.lifecycle)
+                    export(deps.jetbrains.kotlinx.kotlinxCoroutinesCore)
                 }
             }
         }
@@ -45,29 +45,15 @@ kotlin {
         (allSet - android).dependsOn(nonAndroid)
 
         common.main.dependencies {
-            api(deps.decompose)
-//            implementation(project(":sample:shared:dynamic-features:api"))
-            api(deps.essenty.lifecycle)
-            implementation(deps.reaktive.reaktive)
+            implementation(deps.jetbrains.kotlinx.kotlinxCoroutinesCore)
         }
 
-        android.main.dependencies {
-            implementation(deps.decompose.extensions.android)
-            implementation(deps.android.material.material)
-            implementation(deps.android.play.core)
-        }
+        android.main.dependencies {}
 
-        nonAndroid.main.dependencies {
-//            implementation(project(":sample:shared:dynamic-features:feature1Impl"))
-//            implementation(project(":sample:shared:dynamic-features:feature2Impl"))
-        }
+        nonAndroid.main.dependencies {}
 
         js.main.dependencies {
             implementation(project.dependencies.enforcedPlatform(deps.jetbrains.kotlinWrappers.kotlinWrappersBom.get()))
-            implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
-            implementation("org.jetbrains.kotlin-wrappers:kotlin-styled")
-            implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
-            implementation("org.jetbrains.kotlin-wrappers:kotlin-mui")
         }
     }
 }
