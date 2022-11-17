@@ -8,9 +8,10 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.konan.target.Family
 
 plugins {
-    id("kotlin-multiplatform")
+    kotlin("multiplatform")
     id("com.android.library")
     id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.7.21"
     id("com.arkivanov.gradle.setup")
 }
 
@@ -18,13 +19,12 @@ setupMultiplatform {
     android()
     jvm()
     js(IR) { browser() }
-    iosCompat(
-        arm64 = null, // Comment out to enable arm64 target
-    )
+    iosCompat()
 }
 
 kotlin {
     targets
+        .asSequence()
         .filterIsInstance<KotlinNativeTarget>()
         .filter { it.konanTarget.family == Family.IOS }
         .forEach {
@@ -32,6 +32,7 @@ kotlin {
                 framework {
                     baseName = "Shared"
                     export(deps.jetbrains.kotlinx.kotlinxCoroutinesCore)
+                    export(deps.jetbrains.kotlinx.serialzation.json)
                 }
             }
         }
@@ -46,6 +47,7 @@ kotlin {
 
         common.main.dependencies {
             implementation(deps.jetbrains.kotlinx.kotlinxCoroutinesCore)
+            implementation(deps.jetbrains.kotlinx.serialzation.json)
         }
 
         android.main.dependencies {}
