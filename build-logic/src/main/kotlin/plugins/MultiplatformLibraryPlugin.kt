@@ -29,18 +29,6 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
             }
 
             extensions.configure<KotlinMultiplatformExtension> {
-                targets
-                    .asSequence()
-                    .filterIsInstance<KotlinNativeTarget>()
-                    .filter { it.konanTarget.family == Family.IOS }
-                    .forEach {
-                        it.binaries {
-                            framework {
-                                baseName = "${project.name}-shared"
-                            }
-                        }
-                    }
-
                 setupSourceSets {
                     val android by bundle()
                     val js by bundle()

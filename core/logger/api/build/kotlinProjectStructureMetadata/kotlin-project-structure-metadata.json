@@ -81,7 +81,9 @@
       {
         "name": "commonMain",
         "dependsOn": [],
-        "moduleDependency": [],
+        "moduleDependency": [
+          "co.touchlab:kermit"
+        ],
         "binaryLayout": "klib"
       },
       {

@@ -13,6 +13,15 @@ pluginManagement {
     includeBuild("build-logic")
 }
 
+@Suppress("UnstableApiUsage")
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("deps") {
+            from(files("deps.versions.toml"))
+        }
+    }
+}
+
 with(DreamlightPalProjectDefaults) {
     rootProject.name = ProjectName
     rootDir.copyGradleToCompositeBuild()
@@ -26,7 +35,7 @@ private object DreamlightPalProjectDefaults {
     const val ProjectName = "DreamlightPal"
 
     //    val AppModules = sequenceOf("")
-    val CoreModules = sequenceOf("logger:api", "logger:impl")
+    val CoreModules = sequenceOf("logger:api", "collection:api", "collection:impl" )
     val FeatureModules = sequenceOf<String>()
 }
 

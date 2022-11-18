@@ -1,0 +1,6 @@
+framework module collection_api_shared {
+    umbrella header "collection_api_shared.h"
+
+    export *
+    module * { export * }
+}

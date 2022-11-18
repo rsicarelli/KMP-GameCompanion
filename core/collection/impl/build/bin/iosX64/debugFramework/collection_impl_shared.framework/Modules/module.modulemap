@@ -1,0 +1,8 @@
+framework module collection_impl_shared {
+    umbrella header "collection_impl_shared.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

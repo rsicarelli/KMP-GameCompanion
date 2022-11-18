@@ -15,12 +15,10 @@ java {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-    implementation(deps.androidGradlePlugin)
-    implementation(deps.kotlinGradlePlugin)
-    implementation(deps.multiplatformGradlePlugin)
-    implementation(deps.detektGradlePlugin)
-    implementation(deps.arkivanovGradlePlugin)
+    implementation(Deps.androidGradlePlugin)
+    implementation(Deps.kotlinGradlePlugin)
+    implementation(Deps.arkivanovGradlePlugin)
+    implementation(Deps.detektGradlePlugin)
 }
 
 gradlePlugin {
@@ -32,4 +30,21 @@ gradlePlugin {
         id = "app.dreamlightpal.multiplatform.library"
         implementationClass = "plugins.MultiplatformLibraryPlugin"
     }
+}
+
+object Deps {
+
+    private const val AndroidGradlePluginVersion: String = "7.2.2"
+    const val androidGradlePlugin: String = "com.android.tools.build:gradle:${AndroidGradlePluginVersion}"
+
+    private const val DetektGradlePluginVersion: String = "1.21.0-RC2"
+    const val detektGradlePlugin: String =
+        "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${DetektGradlePluginVersion}"
+
+    private const val KotlinVersion: String = "1.7.21"
+    const val kotlinGradlePlugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVersion}"
+
+    private const val ArkivanovGradlePlugin: String = "60ac46054c"
+    const val arkivanovGradlePlugin: String =
+        "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin:${ArkivanovGradlePlugin}"
 }

@@ -1,0 +1,11 @@
+app.dreamlightpal.collection.api-pngs-0 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/generated/res/pngs/release
+app.dreamlightpal.collection.api-resValues-1 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/generated/res/resValues/release
+app.dreamlightpal.collection.api-rs-2 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/generated/res/rs/release
+app.dreamlightpal.collection.api-mergeReleaseResources-3 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+app.dreamlightpal.collection.api-mergeReleaseResources-4 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+app.dreamlightpal.collection.api-merged_res-5 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/build/intermediates/merged_res/release
+app.dreamlightpal.collection.api-androidMain-6 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/androidMain/res
+app.dreamlightpal.collection.api-androidRelease-7 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/androidRelease/res
+app.dreamlightpal.collection.api-main-8 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/main/res
+app.dreamlightpal.collection.api-release-9 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/release/res
+app.dreamlightpal.collection.api-packaged_res-10 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/intermediates/packaged_res/release

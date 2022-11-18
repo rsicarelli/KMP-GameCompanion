@@ -1,0 +1,11 @@
+{
+  "name": "DreamlightPal-impl",
+  "version": "0.0.0-unspecified",
+  "main": "DreamlightPal-impl.js",
+  "types": "DreamlightPal-impl.d.ts",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

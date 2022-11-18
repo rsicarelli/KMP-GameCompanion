@@ -1,0 +1,10 @@
+app.dreamlightpal.core.logger.api-pngs-0 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/generated/res/pngs/release
+app.dreamlightpal.core.logger.api-resValues-1 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/generated/res/resValues/release
+app.dreamlightpal.core.logger.api-rs-2 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/generated/res/rs/release
+app.dreamlightpal.core.logger.api-mergeReleaseResources-3 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+app.dreamlightpal.core.logger.api-mergeReleaseResources-4 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+app.dreamlightpal.core.logger.api-merged_res-5 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/intermediates/merged_res/release
+app.dreamlightpal.core.logger.api-androidMain-6 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/androidMain/res
+app.dreamlightpal.core.logger.api-androidRelease-7 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/androidRelease/res
+app.dreamlightpal.core.logger.api-main-8 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/main/res
+app.dreamlightpal.core.logger.api-release-9 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/release/res
