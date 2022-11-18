@@ -1,3 +1,3 @@
 plugins {
-    id("app.dreamlight.root")
+    id("app.dreamlightpal.root")
 }

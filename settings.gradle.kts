@@ -5,8 +5,10 @@ enableFeaturePreview(org.gradle.api.internal.FeaturePreviews.Feature.TYPESAFE_PR
 
 pluginManagement {
     repositories {
+        mavenCentral()
         gradlePluginPortal()
         maven("https://jitpack.io")
+        google()
     }
     includeBuild("build-logic")
 }
@@ -16,7 +18,7 @@ with(DreamlightPalProjectDefaults) {
     rootDir.copyGradleToCompositeBuild()
 
     //    AppModules.forEach { include(":app:$it") }
-    //    CoreModules.forEach { include(":core:$it") }
+    CoreModules.forEach { include(":core:$it") }
 }
 
 private object DreamlightPalProjectDefaults {
@@ -24,7 +26,7 @@ private object DreamlightPalProjectDefaults {
     const val ProjectName = "DreamlightPal"
 
     //    val AppModules = sequenceOf("")
-    val CoreModules = sequenceOf("collection:api", "collection:impl", "logger")
+    val CoreModules = sequenceOf("logger:api", "logger:impl")
     val FeatureModules = sequenceOf<String>()
 }
 

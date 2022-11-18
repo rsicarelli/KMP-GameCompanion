@@ -3,8 +3,8 @@ plugins {
 }
 
 repositories {
-    mavenCentral()
     google()
+    mavenCentral()
     gradlePluginPortal()
     maven("https://jitpack.io")
 }
@@ -15,16 +15,21 @@ java {
 }
 
 dependencies {
-    compileOnly(kotlin("stdlib"))
-    compileOnly(deps.androidGradlePlugin)
+    implementation(kotlin("stdlib"))
+    implementation(deps.androidGradlePlugin)
     implementation(deps.kotlinGradlePlugin)
-    compileOnly(deps.detektGradlePlugin)
+    implementation(deps.multiplatformGradlePlugin)
+    implementation(deps.detektGradlePlugin)
     implementation(deps.arkivanovGradlePlugin)
 }
 
 gradlePlugin {
     plugins.register("rootProject") {
-        id = "app.dreamlight.root"
+        id = "app.dreamlightpal.root"
         implementationClass = "plugins.RootProjectPlugin"
+    }
+    plugins.register("multiplatformLibrary") {
+        id = "app.dreamlightpal.multiplatform.library"
+        implementationClass = "plugins.MultiplatformLibraryPlugin"
     }
 }

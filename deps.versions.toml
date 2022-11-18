@@ -5,7 +5,7 @@ kotlin = "1.7.21"
 essenty = "0.6.0"
 reaktive = "1.2.1"
 junit = "4.13.2"
-androidGradlePluginVerison = "7.3.1"
+androidGradlePluginVerison = "7.2.2"
 arkivanovGradlePluginVersion = "60ac46054c"
 jetbrainsCompose = "1.2.0"
 jetbrainsKotlinWrappers = "0.0.1-pre.325-kotlin-1.6.10"
@@ -79,5 +79,6 @@ androidGradlePlugin = { module = "com.android.tools.build:gradle", version.ref =
 detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 arkivanovGradlePlugin = { module = "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin", version.ref = "arkivanovGradlePluginVersion" }
+multiplatformGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 #kspGradlePlugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
 #multiplatformComposeGradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
