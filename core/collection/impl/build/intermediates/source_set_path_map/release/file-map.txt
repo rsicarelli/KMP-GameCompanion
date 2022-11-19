@@ -10,3 +10,4 @@ app.dreamlightpal.collection.impl-androidRelease-8 /Users/rsicarelli/Workspace/P
 app.dreamlightpal.collection.impl-main-9 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/impl/src/main/res
 app.dreamlightpal.collection.impl-release-10 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/impl/src/release/res
 app.dreamlightpal.collection.impl-packaged_res-11 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/build/intermediates/packaged_res/release
+app.dreamlightpal.collection.impl-packaged_res-12 /Users/rsicarelli/Workspace/Personal/DreamlightPal/core/module-provider/api/build/intermediates/packaged_res/release

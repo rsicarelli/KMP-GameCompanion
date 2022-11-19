@@ -3,7 +3,7 @@
 3    package="app.dreamlightpal.collection.api" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="21"
+6        android:minSdkVersion="23"
 6-->/Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="33" />
 7-->/Users/rsicarelli/Workspace/Personal/DreamlightPal/core/collection/api/src/main/AndroidManifest.xml

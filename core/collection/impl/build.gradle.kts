@@ -1,23 +1,18 @@
-import com.arkivanov.gradle.bundle
-import com.arkivanov.gradle.dependsOn
-import com.arkivanov.gradle.iosCompat
-import com.arkivanov.gradle.setupMultiplatform
 import com.arkivanov.gradle.setupSourceSets
-import org.gradle.api.internal.artifacts.dependencies.DefaultDependencyConstraint.strictly
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import org.jetbrains.kotlin.konan.target.Family
 
 plugins {
     id("app.dreamlightpal.multiplatform.library")
+    id("app.dreamlightpal.multiplatform.coroutines")
+    id("app.dreamlightpal.multiplatform.serialization")
 }
 
 kotlin {
     setupSourceSets {
         common.main.dependencies {
-            implementation(deps.jetbrains.kotlinx.kotlinxCoroutinesCore)
-            implementation(deps.jetbrains.kotlinx.serialzation.json)
+            implementation(projects.core.moduleProvider.api)
             implementation(projects.core.logger.api)
             implementation(projects.core.collection.api)
+            implementation(deps.jetbrains.kotlinx.serialization.json)
         }
     }
 }

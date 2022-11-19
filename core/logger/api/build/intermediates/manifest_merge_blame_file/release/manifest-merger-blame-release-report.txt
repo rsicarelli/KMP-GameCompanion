@@ -3,7 +3,7 @@
 3    package="app.dreamlightpal.core.logger.api" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="21"
+6        android:minSdkVersion="23"
 6-->/Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="33" />
 7-->/Users/rsicarelli/Workspace/Personal/DreamlightPal/core/logger/api/src/main/AndroidManifest.xml

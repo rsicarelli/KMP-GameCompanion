@@ -35,7 +35,12 @@ private object DreamlightPalProjectDefaults {
     const val ProjectName = "DreamlightPal"
 
     //    val AppModules = sequenceOf("")
-    val CoreModules = sequenceOf("logger:api", "collection:api", "collection:impl" )
+    val CoreModules = sequenceOf(
+        "logger:api",
+        "collection:api",
+        "collection:impl",
+        "module-provider:api"
+    )
     val FeatureModules = sequenceOf<String>()
 }
 
