@@ -17,6 +17,7 @@ java {
 dependencies {
     implementation(Deps.androidGradlePlugin)
     implementation(Deps.kotlinGradlePlugin)
+    implementation(Deps.kotlinSerializationPlugin)
     implementation(Deps.arkivanovGradlePlugin)
     implementation(Deps.detektGradlePlugin)
     implementation(Deps.kmpCoroutinesGradlePlugin)
@@ -35,6 +36,10 @@ gradlePlugin {
         id = "app.dreamlightpal.multiplatform.coroutines"
         implementationClass = "plugins.MultiplatformCoroutinesPlugin"
     }
+    plugins.register("serializationPlugin") {
+        id = "app.dreamlightpal.multiplatform.serialization"
+        implementationClass = "plugins.SerializationPlugin"
+    }
 }
 
 object Deps {
@@ -48,11 +53,15 @@ object Deps {
 
     private const val KotlinVersion: String = "1.7.21"
     const val kotlinGradlePlugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVersion}"
+    const val kotlinSerializationPlugin: String =
+        "org.jetbrains.kotlin:kotlin-serialization:${Build_gradle.Deps.KotlinVersion}"
 
     private const val ArkivanovGradlePlugin: String = "60ac46054c"
     const val arkivanovGradlePlugin: String =
         "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin:${ArkivanovGradlePlugin}"
 
     private const val KmpCoroutines: String = "0.13.2"
-    const val kmpCoroutinesGradlePlugin: String = "com.rickclephas.kmp.nativecoroutines:com.rickclephas.kmp.nativecoroutines.gradle.plugin:$KmpCoroutines"
+    const val kmpCoroutinesGradlePlugin: String =
+        "com.rickclephas.kmp.nativecoroutines:com.rickclephas.kmp.nativecoroutines.gradle.plugin:$KmpCoroutines"
+
 }

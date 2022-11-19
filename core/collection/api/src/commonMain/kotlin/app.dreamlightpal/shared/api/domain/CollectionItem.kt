@@ -1,11 +1,6 @@
 @file:Suppress("InvalidPackageDeclaration")
 
-package app.dreamlightpal.shared.api
-
-data class Collection(
-    val total: Int,
-    val items: List<CollectionItem>,
-)
+package app.dreamlightpal.shared.api.domain
 
 data class CollectionItem(
     val itemId: String,

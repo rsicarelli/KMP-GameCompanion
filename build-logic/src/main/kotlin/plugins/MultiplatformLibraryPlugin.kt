@@ -13,8 +13,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import org.jetbrains.kotlin.konan.target.Family
 
 class MultiplatformLibraryPlugin : Plugin<Project> {
 
@@ -25,6 +23,7 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                 apply("com.android.library")
                 apply("com.arkivanov.gradle.setup")
             }
+
             setupMultiplatform {
                 android()
                 jvm()
