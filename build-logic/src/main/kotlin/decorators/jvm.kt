@@ -32,6 +32,7 @@ internal fun KotlinJvmTarget.applyJvmTarget() {
     }
 }
 
+@Suppress("UnstableApiUsage")
 internal fun CommonExtension<*, *, *, *>.defaultCompileOptions() = compileOptions {
     sourceCompatibility = DefaultJavaVersion
     targetCompatibility = DefaultJavaVersion
@@ -53,6 +54,6 @@ internal fun KotlinJvmOptions.defaultJvmOptions(project: Project) {
 
 private object KotlinAndroidDefaults {
 
-    val DefaultJavaVersion = JavaVersion.VERSION_1_8
-    val DefaultKotlinJvmTarget = JavaVersion.VERSION_1_8.toString()
+    val DefaultJavaVersion = JavaVersion.VERSION_11
+    val DefaultKotlinJvmTarget = JavaVersion.VERSION_11.toString()
 }

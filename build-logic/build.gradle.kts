@@ -3,8 +3,8 @@ plugins {
 }
 
 repositories {
-    google()
     mavenCentral()
+    google()
     gradlePluginPortal()
     maven("https://jitpack.io")
 }
@@ -19,6 +19,7 @@ dependencies {
     implementation(Deps.kotlinGradlePlugin)
     implementation(Deps.arkivanovGradlePlugin)
     implementation(Deps.detektGradlePlugin)
+    implementation(Deps.kmpCoroutinesGradlePlugin)
 }
 
 gradlePlugin {
@@ -29,6 +30,10 @@ gradlePlugin {
     plugins.register("multiplatformLibrary") {
         id = "app.dreamlightpal.multiplatform.library"
         implementationClass = "plugins.MultiplatformLibraryPlugin"
+    }
+    plugins.register("multiplatformCoroutines") {
+        id = "app.dreamlightpal.multiplatform.coroutines"
+        implementationClass = "plugins.MultiplatformCoroutinesPlugin"
     }
 }
 
@@ -47,4 +52,7 @@ object Deps {
     private const val ArkivanovGradlePlugin: String = "60ac46054c"
     const val arkivanovGradlePlugin: String =
         "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin:${ArkivanovGradlePlugin}"
+
+    private const val KmpCoroutines: String = "0.13.2"
+    const val kmpCoroutinesGradlePlugin: String = "com.rickclephas.kmp.nativecoroutines:com.rickclephas.kmp.nativecoroutines.gradle.plugin:$KmpCoroutines"
 }

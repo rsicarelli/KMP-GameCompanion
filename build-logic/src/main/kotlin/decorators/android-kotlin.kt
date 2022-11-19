@@ -34,10 +34,6 @@ internal fun Project.applyKotlinAndroid(
         }
 
         defaultCompileOptions()
-
-        extensions.configure<KotlinJvmOptions> {
-            defaultJvmOptions(project)
-        }
     }
 }
 

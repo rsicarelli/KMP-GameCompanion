@@ -1,10 +1,14 @@
 package plugins
 
+import com.android.build.gradle.LibraryExtension
 import com.arkivanov.gradle.bundle
 import com.arkivanov.gradle.dependsOn
 import com.arkivanov.gradle.iosCompat
 import com.arkivanov.gradle.setupMultiplatform
 import com.arkivanov.gradle.setupSourceSets
+import decorators.applyDefaultTargetSdk
+import decorators.applyJUnit5
+import decorators.applyKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -28,6 +32,24 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                 iosCompat()
             }
 
+            extensions.configure<LibraryExtension> {
+                applyKotlinAndroid(this)
+                applyJUnit5(this)
+
+                buildTypes {
+                    defaultConfig {
+                        consumerProguardFiles(
+                            "proguard-rules.pro",
+                            "consumer-rules.pro",
+                            "proguard-rules.txt",
+                            "proguard.txt"
+                        )
+                    }
+                }
+
+                applyDefaultTargetSdk()
+            }
+
             extensions.configure<KotlinMultiplatformExtension> {
                 setupSourceSets {
                     val android by bundle()
@@ -41,6 +63,14 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                     android.main.dependencies {}
                     nonAndroid.main.dependencies {}
                     js.main.dependencies {}
+                }
+            }
+
+            plugins.withId("com.android.library") {
+                extensions.configure<LibraryExtension> {
+                    libraryVariants.all {
+                        generateBuildConfig.enabled = false
+                    }
                 }
             }
         }
