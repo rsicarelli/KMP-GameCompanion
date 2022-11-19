@@ -1,6 +1,0 @@
-framework module api_shared {
-    umbrella header "api_shared.h"
-
-    export *
-    module * { export * }
-}
