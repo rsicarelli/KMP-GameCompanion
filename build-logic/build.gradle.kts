@@ -40,6 +40,10 @@ gradlePlugin {
         id = "app.dreamlightpal.multiplatform.serialization"
         implementationClass = "plugins.SerializationPlugin"
     }
+    plugins.register("kotlinLibraryPlugin") {
+        id = "app.dreamlightpal.kotlin.library"
+        implementationClass = "plugins.KotlinLibraryPlugin"
+    }
 }
 
 /**

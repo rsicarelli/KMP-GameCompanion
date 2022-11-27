@@ -16,5 +16,10 @@ kotlin {
 
             implementation(deps.jetbrains.kotlinx.serialization.json)
         }
+
+
+        common.test.dependencies {
+            implementation(projects.core.collection.fake)
+        }
     }
 }

@@ -28,7 +28,9 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                 android()
                 jvm()
                 js(IR) { browser() }
-                iosCompat()
+                iosCompat(
+                    x64 = null
+                )
             }
 
             extensions.configure<LibraryExtension> {
@@ -47,10 +49,6 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                 }
 
                 applyDefaultTargetSdk()
-
-                libraryVariants.all {
-                    generateBuildConfig.enabled = false
-                }
             }
 
             extensions.configure<KotlinMultiplatformExtension> {
