@@ -46,7 +46,7 @@ gradlePlugin {
  * Gradle doesn't support multiple version catalogue in the same project
  * https://github.com/gradle/gradle/issues/20383
  * */
-object Deps {
+private object Deps {
 
     private const val agpVersion: String = "7.2.2"
     const val AndroidGradlePlugin: String = "com.android.tools.build:gradle:${agpVersion}"

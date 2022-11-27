@@ -9,7 +9,6 @@ import com.arkivanov.gradle.tvosCompat
 import com.arkivanov.gradle.watchosCompat
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.maven
 import org.gradle.kotlin.dsl.repositories
 import org.gradle.kotlin.dsl.the
@@ -51,6 +50,5 @@ class RootProjectPlugin : Plugin<Project> {
         plugins.withType<NodeJsRootPlugin> {
             the<NodeJsRootExtension>().nodeVersion = "16.0.0"
         }
-
     }
 }

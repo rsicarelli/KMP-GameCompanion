@@ -47,6 +47,10 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                 }
 
                 applyDefaultTargetSdk()
+
+                libraryVariants.all {
+                    generateBuildConfig.enabled = false
+                }
             }
 
             extensions.configure<KotlinMultiplatformExtension> {
@@ -62,14 +66,6 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
                     android.main.dependencies {}
                     nonAndroid.main.dependencies {}
                     js.main.dependencies {}
-                }
-            }
-
-            plugins.withId("com.android.library") {
-                extensions.configure<LibraryExtension> {
-                    libraryVariants.all {
-                        generateBuildConfig.enabled = false
-                    }
                 }
             }
         }

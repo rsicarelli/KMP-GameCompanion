@@ -1,4 +1,4 @@
-package gradle
+package plugins
 
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 //import decorators.applyCompose
