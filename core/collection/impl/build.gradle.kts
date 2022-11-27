@@ -9,10 +9,11 @@ plugins {
 kotlin {
     setupSourceSets {
         common.main.dependencies {
-            implementation(projects.core.moduleProvider.api)
-            implementation(projects.core.logger.api)
             implementation(projects.core.collection.api)
+            implementation(projects.core.logger.api)
+            implementation(projects.core.moduleProvider.api)
             implementation(projects.core.threading.api)
+
             implementation(deps.jetbrains.kotlinx.serialization.json)
         }
     }

@@ -71,3 +71,18 @@ class MultiplatformLibraryPlugin : Plugin<Project> {
         }
     }
 }
+
+fun KotlinMultiplatformExtension.exportIOSFramework(exports: Sequence<Any>) {
+    targets
+        .asSequence()
+        .filterIsInstance<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>()
+        .filter { it.konanTarget.family == org.jetbrains.kotlin.konan.target.Family.IOS }
+        .forEach {
+            it.binaries {
+                framework {
+                    baseName = "${project.name}-shared"
+                    exports.forEach(::export)
+                }
+            }
+        }
+}

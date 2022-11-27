@@ -6,9 +6,10 @@ plugins {
     id("app.dreamlightpal.multiplatform.serialization")
 }
 
-
 kotlin {
     setupSourceSets {
-        common.main.dependencies { implementation(deps.jetbrains.kotlinx.serialization.json) }
+        common.main.dependencies {
+            implementation(deps.jetbrains.kotlinx.serialization.json)
+        }
     }
 }

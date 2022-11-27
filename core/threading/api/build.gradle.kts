@@ -1,24 +1,15 @@
 import com.arkivanov.gradle.setupSourceSets
+import plugins.exportIOSFramework
 
 plugins {
     id("app.dreamlightpal.multiplatform.library")
 }
 
 kotlin {
-    targets
-        .asSequence()
-        .filterIsInstance<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>()
-        .filter { it.konanTarget.family == org.jetbrains.kotlin.konan.target.Family.IOS }
-        .forEach {
-            it.binaries {
-                framework {
-                    baseName = "${project.name}-shared"
-                    export(deps.rickclephas.kmp.native.coroutines.core)
-                }
-            }
-        }
+    val sharedDeps = sequenceOf(deps.rickclephas.kmp.native.coroutines.core)
 
+    exportIOSFramework(sharedDeps)
     setupSourceSets {
-        common.main.dependencies { api(deps.rickclephas.kmp.native.coroutines.core) }
+        common.main.dependencies { sharedDeps.forEach(::api) }
     }
 }
