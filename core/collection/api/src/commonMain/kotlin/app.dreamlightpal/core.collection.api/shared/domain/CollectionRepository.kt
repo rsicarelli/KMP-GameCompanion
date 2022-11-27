@@ -1,4 +1,4 @@
-package app.dreamlightpal.shared.api.domain
+package app.dreamlightpal.core.collection.api.shared.domain
 
 import kotlinx.coroutines.flow.SharedFlow
 

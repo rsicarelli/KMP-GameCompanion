@@ -24,6 +24,7 @@ androidxActivity = "1.3.1"
 androidxTestCore = "1.4.0"
 koin = "3.2.2"
 kermit = "1.2.2"
+kmpNativecoroutines = "0.13.2"
 
 [libraries]
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
@@ -68,3 +69,4 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+rickclephas-kmp-native-coroutines-core = { module = "com.rickclephas.kmp:kmp-nativecoroutines-core", version.ref = "kmpNativecoroutines" }

@@ -9,19 +9,13 @@ import decorators.KotlinAndroidDefaults.CompileSdk
 import decorators.KotlinAndroidDefaults.MinSdk
 import decorators.KotlinAndroidDefaults.TargetSdk
 import defaultCompileOptions
-import defaultJvmOptions
-import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
 /**
  * Applies the standard way for setting up a Kotlin Android target
  */
-internal fun Project.applyKotlinAndroid(
+internal fun applyKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>,
 ) {
-    val project = this
-
     commonExtension.apply {
         compileSdk = CompileSdk
 

@@ -1,10 +1,10 @@
-package app.dreamlightpal.shared.collection.impl.domain
+package app.dreamlightpal.core.collection.impl.shared.domain
 
-import app.dreamlightpal.shared.api.domain.CollectionItem
-import app.dreamlightpal.shared.api.domain.CollectionRepository
-import app.dreamlightpal.shared.api.domain.SyncCollectionDatabaseUseCase
-import app.dreamlightpal.shared.collection.impl.domain.SyncCollectionDatabaseDefaults.RawJson
-import co.touchlab.kermit.Logger
+import app.dreamlightpal.core.collection.api.shared.domain.CollectionItem
+import app.dreamlightpal.core.collection.api.shared.domain.CollectionRepository
+import app.dreamlightpal.core.collection.api.shared.domain.SyncCollectionDatabaseUseCase
+import app.dreamlightpal.core.collection.impl.shared.domain.SyncCollectionDatabaseDefaults.RawJson
+import app.dreamlightpal.core.logger.api.shared.Logger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

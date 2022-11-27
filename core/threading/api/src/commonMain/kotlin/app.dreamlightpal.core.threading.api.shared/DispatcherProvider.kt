@@ -1,4 +1,4 @@
-package app.dreamlightpal.threading.api.shared
+package app.dreamlightpal.core.threading.api.shared
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.MainCoroutineDispatcher

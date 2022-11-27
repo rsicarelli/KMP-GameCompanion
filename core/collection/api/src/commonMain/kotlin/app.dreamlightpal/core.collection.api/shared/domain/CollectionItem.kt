@@ -1,6 +1,6 @@
 @file:Suppress("InvalidPackageDeclaration")
 
-package app.dreamlightpal.shared.api.domain
+package app.dreamlightpal.core.collection.api.shared.domain
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -1,9 +1,9 @@
-package app.dreamlightpal.shared.collection.impl.data
+package app.dreamlightpal.core.collection.impl.shared.data
 
-import app.dreamlightpal.shared.api.domain.CollectionItem
-import app.dreamlightpal.shared.api.domain.CollectionRepository
-import app.dreamlightpal.threading.api.shared.DispatcherProvider
-import co.touchlab.kermit.Logger
+import app.dreamlightpal.core.logger.api.shared.Logger
+import app.dreamlightpal.core.collection.api.shared.domain.CollectionItem
+import app.dreamlightpal.core.collection.api.shared.domain.CollectionRepository
+import app.dreamlightpal.core.threading.api.shared.DispatcherProvider
 import com.rickclephas.kmp.nativecoroutines.NativeCoroutineScope
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
