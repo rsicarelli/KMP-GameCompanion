@@ -15,12 +15,12 @@ java {
 }
 
 dependencies {
-    implementation(Deps.androidGradlePlugin)
-    implementation(Deps.kotlinGradlePlugin)
-    implementation(Deps.kotlinSerializationPlugin)
-    implementation(Deps.arkivanovGradlePlugin)
-    implementation(Deps.detektGradlePlugin)
-    implementation(Deps.kmpCoroutinesGradlePlugin)
+    implementation(Deps.KotlinGradlePlugin)
+    implementation(Deps.DetektGradlePlugin)
+    implementation(Deps.AndroidGradlePlugin)
+    implementation(Deps.ArkivanovGradlePlugin)
+    implementation(Deps.KotlinSerializationPlugin)
+    implementation(Deps.KmpNativeCoroutinesGradlePlugin)
 }
 
 gradlePlugin {
@@ -48,24 +48,22 @@ gradlePlugin {
  * */
 object Deps {
 
-    private const val AndroidGradlePluginVersion: String = "7.2.2"
-    const val androidGradlePlugin: String = "com.android.tools.build:gradle:${AndroidGradlePluginVersion}"
+    private const val agpVersion: String = "7.2.2"
+    const val AndroidGradlePlugin: String = "com.android.tools.build:gradle:${agpVersion}"
 
-    private const val DetektGradlePluginVersion: String = "1.21.0-RC2"
-    const val detektGradlePlugin: String =
-        "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${DetektGradlePluginVersion}"
+    private const val detektVersion: String = "1.21.0-RC2"
+    const val DetektGradlePlugin: String = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${detektVersion}"
 
-    private const val KotlinVersion: String = "1.7.21"
-    const val kotlinGradlePlugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVersion}"
-    const val kotlinSerializationPlugin: String =
-        "org.jetbrains.kotlin:kotlin-serialization:${Build_gradle.Deps.KotlinVersion}"
+    private const val kotlinVersion: String = "1.7.21"
+    const val KotlinGradlePlugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
+    const val KotlinSerializationPlugin: String = "org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion"
 
-    private const val ArkivanovGradlePlugin: String = "60ac46054c"
-    const val arkivanovGradlePlugin: String =
-        "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin:${ArkivanovGradlePlugin}"
+    private const val arkivanovGradlePluginVersion: String = "60ac46054c"
+    const val ArkivanovGradlePlugin: String =
+        "com.github.arkivanov.gradle-setup-plugin:com.arkivanov.gradle.setup.gradle.plugin:${arkivanovGradlePluginVersion}"
 
     private const val KmpCoroutines: String = "0.13.2"
-    const val kmpCoroutinesGradlePlugin: String =
+    const val KmpNativeCoroutinesGradlePlugin: String =
         "com.rickclephas.kmp.nativecoroutines:com.rickclephas.kmp.nativecoroutines.gradle.plugin:$KmpCoroutines"
 
 }
