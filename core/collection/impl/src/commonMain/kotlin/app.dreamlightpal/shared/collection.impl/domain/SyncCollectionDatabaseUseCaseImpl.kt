@@ -3,7 +3,6 @@ package app.dreamlightpal.shared.collection.impl.domain
 import app.dreamlightpal.shared.api.domain.CollectionItem
 import app.dreamlightpal.shared.api.domain.CollectionRepository
 import app.dreamlightpal.shared.api.domain.SyncCollectionDatabaseUseCase
-import app.dreamlightpal.shared.collection.impl.domain.CollectionDto.Companion.serializer
 import app.dreamlightpal.shared.collection.impl.domain.SyncCollectionDatabaseDefaults.RawJson
 import co.touchlab.kermit.Logger
 import kotlinx.coroutines.CoroutineScope
@@ -17,9 +16,9 @@ internal class SyncCollectionDatabaseUseCaseImpl(
     private val collectionRepository: CollectionRepository,
 ) : SyncCollectionDatabaseUseCase {
 
-    override fun invoke(request: CoroutineScope) {
-        request.launch(Dispatchers.Default) {
-            runCatching { Json.decodeFromString(serializer(), RawJson) }
+    override fun invoke(coroutineScope: CoroutineScope) {
+        coroutineScope.launch(Dispatchers.Default) {
+            runCatching { Json.decodeFromString(CollectionDto.serializer(), RawJson) }
                 .onSuccess { (items) -> collectionRepository.addAll(items) }
                 .onFailure { Logger.e("Failed to parse collection json", it) }
         }

@@ -4,5 +4,5 @@ import kotlinx.coroutines.CoroutineScope
 
 interface SyncCollectionDatabaseUseCase {
 
-    operator fun invoke(request: CoroutineScope)
+    operator fun invoke(coroutineScope: CoroutineScope)
 }

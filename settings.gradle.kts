@@ -39,7 +39,9 @@ private object DreamlightPalProjectDefaults {
         "logger:api",
         "collection:api",
         "collection:impl",
-        "module-provider:api"
+        "module-provider:api",
+        "threading:api",
+        "threading:impl"
     )
     val FeatureModules = sequenceOf<String>()
 }
