@@ -5,8 +5,6 @@ import com.arkivanov.gradle.ensureUnreachableTasksDisabled
 import com.arkivanov.gradle.iosCompat
 import com.arkivanov.gradle.macosCompat
 import com.arkivanov.gradle.setupDefaults
-import com.arkivanov.gradle.tvosCompat
-import com.arkivanov.gradle.watchosCompat
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.maven
@@ -25,8 +23,6 @@ class RootProjectPlugin : Plugin<Project> {
                 jvm()
                 js(BOTH) { browser() }
                 iosCompat()
-                watchosCompat()
-                tvosCompat()
                 macosCompat()
             },
             androidConfig = AndroidConfig(
