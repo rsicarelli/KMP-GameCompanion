@@ -2,15 +2,18 @@
 
 package decorators
 
-import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Project
 import org.gradle.api.compose
 import org.gradle.api.libs
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.invoke
+import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-fun Project.setupMultiplatformLibrary() {
+fun Project.setupMultiplatformLibrary(
+    compilerArgs: Sequence<String>,
+) {
     extensions.configure<KotlinMultiplatformExtension> {
         android()
         jvm("desktop")
@@ -38,32 +41,13 @@ fun Project.setupMultiplatformLibrary() {
         }
     }
 
-    extensions.configure<LibraryExtension> {
-        compileSdk = 33
-
-        defaultConfig {
-            minSdk = 26
-            targetSdk = 33
-        }
-
-        sourceSets {
-            named("main") {
-                manifest.srcFile("src/androidMain/AndroidManifest.xml")
-                res.srcDirs("src/androidMain/res", "src/commonMain/resources")
-            }
-        }
-
-        lint {
-            abortOnError = false
-        }
-
-        libraryVariants.all {
-            buildTypes {
-                defaultConfig {
-                    consumerProguardFiles("proguard-rules.pro", "consumer-rules.pro")
-                }
-            }
-            generateBuildConfigProvider.get().enabled = false
+    tasks.withType<KotlinCompile>().configureEach {
+        kotlinOptions {
+            allWarningsAsErrors = false
+            jvmTarget = "11"
         }
     }
+
+    configureAndroidLibrary()
+    configureTest()
 }

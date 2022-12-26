@@ -9,5 +9,7 @@ plugins {
     id("app.dreamlightpal.gradle")
 }
 
-setupMultiplatformLibrary()
+setupMultiplatformLibrary(
+    sequenceOf("")
+)
 
