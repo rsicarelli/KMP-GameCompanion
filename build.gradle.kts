@@ -1,3 +1,26 @@
+@file:Suppress("DSL_SCOPE_VIOLATION")
+
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+    dependencies {
+        classpath(libs.gradlePlugin.android)
+        classpath(libs.gradlePlugin.compose)
+        classpath(libs.gradlePlugin.kotlin)
+        classpath(libs.gradlePlugin.kotlin.serializer)
+    }
+}
+
 plugins {
-    id("app.dreamlightpal.root")
+    id("app.dreamlightpal.gradle")
+    alias(libs.plugins.detekt)
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+    config = files("$projectDir/config/detekt.yml")
 }

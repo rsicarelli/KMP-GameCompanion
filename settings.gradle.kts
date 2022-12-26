@@ -1,53 +1,29 @@
 @file:Suppress("UnstableApiUsage")
 
-enableFeaturePreview(org.gradle.api.internal.FeaturePreviews.Feature.VERSION_CATALOGS.name)
-enableFeaturePreview(org.gradle.api.internal.FeaturePreviews.Feature.TYPESAFE_PROJECT_ACCESSORS.name)
-
 pluginManagement {
     repositories {
         mavenCentral()
         gradlePluginPortal()
-        maven("https://jitpack.io")
         google()
     }
+
     includeBuild("build-logic")
 }
 
-@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
-    versionCatalogs {
-        create("deps") {
-            from(files("deps.versions.toml"))
-        }
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 
-with(DreamlightPalProjectDefaults) {
-    rootProject.name = ProjectName
-    rootDir.copyGradleToCompositeBuild()
+rootDir.copyGradleToCompositeBuild()
 
-    //    AppModules.forEach { include(":app:$it") }
-    CoreModules.forEach { include(":core:$it") }
-}
-
-private object DreamlightPalProjectDefaults {
-
-    const val ProjectName = "DreamlightPal"
-
-    //    val AppModules = sequenceOf("")
-    val CoreModules = sequenceOf(
-        "logger:api",
-        "collection:api",
-        "collection:impl",
-        "collection:fake",
-        "module-provider:api",
-        "threading:api",
-        "threading:impl",
-        "test:core",
-        "test:unit"
-    )
-    val FeatureModules = sequenceOf<String>()
-}
+include(":shared")
 
 /**
  * Sharing gradle.properties between composite builds avoids creating an extra daemon,
