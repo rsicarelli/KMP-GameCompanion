@@ -11,4 +11,4 @@ internal val Project.catalogs
 internal val Project.libs: VersionCatalog get() = catalogs.named("libs")
 
 internal val Project.compose
-    get() = extensions.getByType<ComposeExtension>().dependencies
+    get() = extensions.getByType<ComposeExtension>()

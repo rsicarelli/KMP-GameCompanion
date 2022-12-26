@@ -18,23 +18,21 @@ fun Project.setupMultiplatformLibrary() {
         sourceSets {
             named("commonMain") {
                 dependencies {
-                    api(compose.runtime)
-                    api(compose.foundation)
-                    api(compose.material)
-                    api(compose.materialIconsExtended)
+                    api(compose.dependencies.runtime)
+                    api(compose.dependencies.foundation)
+                    api(compose.dependencies.material)
+                    api(compose.dependencies.materialIconsExtended)
                 }
             }
             named("androidMain") {
-                kotlin.srcDirs("src/jvmMain/kotlin")
                 dependencies {
                     api(libs.findLibrary("androidx-appcompat").get())
                     api(libs.findLibrary("androidx-core").get())
                 }
             }
             named("desktopMain") {
-                kotlin.srcDirs("src/jvmMain/kotlin")
                 dependencies {
-                    api(compose.desktop.common)
+                    api(compose.dependencies.desktop.common)
                 }
             }
         }
@@ -53,6 +51,19 @@ fun Project.setupMultiplatformLibrary() {
                 manifest.srcFile("src/androidMain/AndroidManifest.xml")
                 res.srcDirs("src/androidMain/res", "src/commonMain/resources")
             }
+        }
+
+        lint {
+            abortOnError = false
+        }
+
+        libraryVariants.all {
+            buildTypes {
+                defaultConfig {
+                    consumerProguardFiles("proguard-rules.pro", "consumer-rules.pro")
+                }
+            }
+            generateBuildConfigProvider.get().enabled = false
         }
     }
 }
