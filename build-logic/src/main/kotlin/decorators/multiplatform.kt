@@ -11,10 +11,10 @@ import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 fun Project.setupMultiplatformLibrary(
-    compilerArgs: Sequence<String>,
-    commonMainDependencies: KotlinDependencyHandler.() -> Unit,
-    androidMainDependencies: KotlinDependencyHandler.() -> Unit,
-    desktopMainDependencies: KotlinDependencyHandler.() -> Unit,
+    compilerArgs: Sequence<String> = sequenceOf(),
+    commonMainDependencies: KotlinDependencyHandler.() -> Unit = { },
+    androidMainDependencies: KotlinDependencyHandler.() -> Unit = { },
+    desktopMainDependencies: KotlinDependencyHandler.() -> Unit = { },
 ) {
     extensions.configure<KotlinMultiplatformExtension> {
         android()

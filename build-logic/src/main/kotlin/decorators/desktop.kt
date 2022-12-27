@@ -15,7 +15,6 @@ fun Project.setupDesktopApp() {
             named("jvmMain") {
                 dependencies {
                     implementation(compose.dependencies.desktop.currentOs)
-                    implementation(project(":shared"))
                 }
             }
         }

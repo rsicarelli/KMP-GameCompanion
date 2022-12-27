@@ -18,5 +18,5 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core)
-    implementation(project(":shared"))
+    implementation(projects.shared.designSystem)
 }

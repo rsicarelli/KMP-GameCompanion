@@ -6,7 +6,7 @@ import appdreamlightpal.Collection_item
 import com.squareup.sqldelight.ColumnAdapter
 import com.squareup.sqldelight.db.SqlDriver
 
-class HomeHuntDatabaseFactory(
+class DreamlightPalDatabaseFactory(
     private val driverFactory: DriverFactory,
 ) {
 

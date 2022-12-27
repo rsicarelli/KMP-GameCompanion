@@ -49,5 +49,7 @@ squareup-sqldelight-driver-jvm = { module = "com.squareup.sqldelight:sqlite-driv
 squareup-sqldelight-extension-coroutines = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
 
 [plugins]
-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+arturbosch-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 squareup-sqldelight = { id = "com.squareup.sqldelight", version.ref = "sqlDelight" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

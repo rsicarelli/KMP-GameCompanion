@@ -10,13 +10,12 @@ buildscript {
         classpath(libs.gradlePlugin.android)
         classpath(libs.gradlePlugin.compose)
         classpath(libs.gradlePlugin.kotlin)
-        classpath(libs.gradlePlugin.kotlin.serializer)
     }
 }
 
 plugins {
     id("app.dreamlightpal.gradle")
-    alias(libs.plugins.detekt)
+    alias(libs.plugins.arturbosch.detekt)
 }
 
 detekt {

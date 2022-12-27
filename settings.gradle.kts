@@ -27,7 +27,8 @@ dependencyResolutionManagement {
 
 rootDir.copyGradleToCompositeBuild()
 
-include(":shared", ":desktop", ":android")
+include(":desktop", ":android")
+include(":shared:threading", ":shared:designSystem", ":shared:collection", ":shared:logger")
 
 /**
  * Sharing gradle.properties between composite builds avoids creating an extra daemon,
