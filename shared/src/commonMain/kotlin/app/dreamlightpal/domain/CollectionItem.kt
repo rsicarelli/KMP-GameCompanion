@@ -12,7 +12,7 @@ data class CollectionItem(
     @SerialName("localizedDescriptionKey") val localizedDescriptionKey: String,
     @SerialName("imageUrl") val imageUrl: String,
     @SerialName("locationIds") val locationIds: List<String>,
-    @SerialName("types") val types: List<CollectionType>,
+    @SerialName("types") val types: List<Type>,
     @SerialName("externalTypeRefId") val externalTypeRefId: List<String>,
     @SerialName("activityIds") val activityIds: List<String>,
     @SerialName("collectionRecipeIds") val collectionRecipeIds: List<String>,
@@ -20,12 +20,33 @@ data class CollectionItem(
     @SerialName("energyValue") val energyValue: Int,
     @SerialName("buyPrice") val buyPrice: Int,
     @SerialName("sellPrice") val sellPrice: Int,
-)
+) {
 
-@Serializable
-enum class CollectionType {
+    @Serializable
+    enum class Type {
 
-    MEMORY, CHARACTER, CRAFTING, CRITTER,
-    FISH, FORAGING, INGREDIENT, MEAL,
-    GEM, CLOTHING, FURNITURE;
+        MEMORY, CHARACTER, CRAFTING, CRITTER,
+        FISH, FORAGING, INGREDIENT, MEAL,
+        GEM, CLOTHING, FURNITURE;
+
+        companion object {
+
+            fun fromString(typeAsString: String) = when (typeAsString.lowercase()) {
+                MEMORY.name -> MEMORY
+                CHARACTER.name -> CHARACTER
+                CRAFTING.name -> CRAFTING
+                CRITTER.name -> CRITTER
+                FISH.name -> FISH
+                FORAGING.name -> FORAGING
+                INGREDIENT.name -> INGREDIENT
+                MEAL.name -> MEAL
+                GEM.name -> GEM
+                CLOTHING.name -> CLOTHING
+                FURNITURE.name -> FURNITURE
+                else -> error("type not mapped $typeAsString")
+            }
+        }
+
+    }
+
 }

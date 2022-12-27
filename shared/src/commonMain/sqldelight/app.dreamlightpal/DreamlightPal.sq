@@ -1,0 +1,20 @@
+import app.dreamlightpal.domain.CollectionItem;
+import kotlin.collections.List;
+
+CREATE TABLE collection_item(
+    id TEXT NOT NULL PRIMARY KEY,
+    parentGroupId TEXT NOT NULL,
+    parentGroupIndex TEXT NOT NULL,
+    localizedNameKey TEXT NOT NULL,
+    localizedDescriptionKey TEXT NOT NULL,
+    imageUrl TEXT NOT NULL,
+    locationIds TEXT AS List<String> NOT NULL,
+    types TEXT AS List<CollectionItem.Type> NOT NULL,
+    externalTypeRefId TEXT AS List<String> NOT NULL,
+    activityIds TEXT AS List<String> NOT NULL,
+    collectionRecipeIds TEXT AS List<String> NOT NULL,
+    starCount INTEGER NOT NULL,
+    energyValue INTEGER NOT NULL,
+    buyPrice INTEGER NOT NULL,
+    sellPrice INTEGER NOT NULL
+);

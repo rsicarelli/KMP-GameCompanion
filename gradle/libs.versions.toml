@@ -20,6 +20,7 @@ androidxTestCore = "1.4.0"
 koin = "3.2.2"
 kermit = "1.2.2"
 kmpNativecoroutines = "0.13.2"
+sqlDelight = "1.5.4"
 
 [libraries]
 
@@ -42,5 +43,11 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 
 touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
+squareup-sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelight" }
+squareup-sqldelight-driver-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelight" }
+squareup-sqldelight-driver-jvm = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqlDelight" }
+squareup-sqldelight-extension-coroutines = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
+
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+squareup-sqldelight = { id = "com.squareup.sqldelight", version.ref = "sqlDelight" }
