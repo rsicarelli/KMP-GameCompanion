@@ -6,4 +6,9 @@ plugins {
     id("app.dreamlightpal.gradle")
 }
 
-setupDesktopApp()
+setupDesktopApp(
+    dependencyHandler = {
+        implementation(compose.dependencies.desktop.currentOs)
+        implementation(projects.core.designSystem)
+    }
+)

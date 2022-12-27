@@ -7,15 +7,16 @@ import org.gradle.kotlin.dsl.invoke
 import org.jetbrains.compose.desktop.DesktopExtension
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
 
-fun Project.setupDesktopApp() {
+fun Project.setupDesktopApp(
+    dependencyHandler: KotlinDependencyHandler.() -> Unit = {},
+) {
     extensions.configure<KotlinMultiplatformExtension> {
         jvm {}
         sourceSets {
             named("jvmMain") {
-                dependencies {
-                    implementation(compose.dependencies.desktop.currentOs)
-                }
+                dependencies(dependencyHandler)
             }
         }
     }

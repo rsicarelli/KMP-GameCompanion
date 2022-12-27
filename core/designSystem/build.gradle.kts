@@ -12,8 +12,9 @@ setupMultiplatformLibrary(
     commonMainDependencies = {
         api(compose.dependencies.runtime)
         api(compose.dependencies.foundation)
-        api(compose.dependencies.material)
-        api(compose.dependencies.materialIconsExtended)
+
+        @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+        api(compose.dependencies.material3)
     },
     androidMainDependencies = {
         api(libs.androidx.appcompat)

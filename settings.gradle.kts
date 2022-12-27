@@ -25,34 +25,41 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DreamlightPal"
-rootDir.copyGradleToCompositeBuild()
+private object ProjectDefaults {
 
-include(":app:desktop", ":app:android")
-include(":core:threading", ":core:designSystem", ":core:collection", ":core:logger")
+    const val name: String = "DreamlightPal"
+    val appModules = sequenceOf(
+        "android", "desktop"
+    ).map { ":app:$it" }.asIterable()
 
-/**
- * Sharing gradle.properties between composite builds avoids creating an extra daemon,
- * saving memory RAM during development.
- *
- * If the content of the gradle.properties files are different, daemons are incompatible and will make
- * the IDE to try to sync the host project.
- *
- * Ideally root gradle.properties should be passed for composite builds, but it is not the case
- * issue link: https://github.com/gradle/gradle/issues/2534
- * */
-fun File.copyGradleToCompositeBuild(
-    compositeBuildPath: String = "build-logic",
-    gradleFilePaths: Sequence<String> = sequenceOf(
-        "gradle.properties", "gradlew.bat", "gradlew",
+    val coreModules = sequenceOf(
+        "collection", "designSystem",
+        "logger", "threading"
+    ).map { ":core:$it" }.asIterable()
+
+    val featureModules = sequenceOf(
+        "home"
+    ).map { ":feature:$it" }.asIterable()
+
+    val sharedFiles = sequenceOf(
+        "gradle.properties", "gradlew",
+        "gradlew.txt", "gradlew.bat",
         "gradle/wrapper/gradle-wrapper.jar",
         "gradle/wrapper/gradle-wrapper.properties"
-    ),
-    override: Boolean = true,
-) = gradleFilePaths.forEach { path ->
-    resolve(path)
-        .copyTo(
-            target = rootDir.resolve(compositeBuildPath).resolve(path),
-            overwrite = override
-        )
+    )
+}
+
+with(ProjectDefaults) {
+    rootProject.name = name
+    rootDir.run {
+        sharedFiles.forEach { path ->
+            resolve(path).copyTo(
+                rootDir.resolve("build-logic").resolve(path),
+                overwrite = true
+            )
+        }
+    }
+    include(appModules)
+    include(coreModules)
+    include(featureModules)
 }
