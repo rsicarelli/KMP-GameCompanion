@@ -18,4 +18,11 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core)
     implementation(projects.core.designSystem)
+
+    implementation(projects.core.collection)
+    implementation(projects.core.navigation)
+    implementation(projects.feature.home)
+    implementation(projects.feature.root)
+    implementation(libs.arkivanov.decompose)
+    implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
 }

@@ -1,4 +1,4 @@
-import app.dreamlightpal.domain.CollectionItem;
+import app.dreamlightpal.collection.domain.CollectionItem;
 import kotlin.collections.List;
 
 CREATE TABLE collection_item(

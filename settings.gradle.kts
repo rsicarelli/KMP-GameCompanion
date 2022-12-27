@@ -34,11 +34,11 @@ private object ProjectDefaults {
 
     val coreModules = sequenceOf(
         "collection", "designSystem",
-        "logger", "threading"
+        "logger", "threading", "navigation"
     ).map { ":core:$it" }.asIterable()
 
     val featureModules = sequenceOf(
-        "home"
+        "home", "root"
     ).map { ":feature:$it" }.asIterable()
 
     val sharedFiles = sequenceOf(
