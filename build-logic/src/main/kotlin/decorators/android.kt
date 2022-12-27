@@ -2,6 +2,7 @@
 
 package decorators
 
+import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
@@ -21,12 +22,12 @@ internal fun Project.configureAndroidLibrary() {
             }
             generateBuildConfigProvider.get().enabled = false
         }
-        lint { abortOnError = false }
+
+        configureLint()
 
         sourceSets {
             named("main") {
                 manifest.srcFile("src/androidMain/AndroidManifest.xml")
-                res.srcDirs("src/androidMain/res", "src/commonMain/resources")
             }
         }
     }
@@ -46,21 +47,23 @@ fun Project.configureAndroidApp(
             this.versionName = versionName
         }
 
-        lint { abortOnError = false }
+        configureLint()
     }
 }
 
 private fun Project.configureAndroidCommon(
-    sourceSet: String = "android",
+    compileSdk: Int = 33,
+    minSdk: Int = 26,
+    targetSdk: Int = 33,
 ) {
     extensions.configure<BaseExtension> {
         namespace = "app.dreamlightpal.${project.name}"
 
-        compileSdkVersion(33)
+        compileSdkVersion(compileSdk)
 
         defaultConfig {
-            minSdk = 26
-            targetSdk = 33
+            this.minSdk = minSdk
+            this.targetSdk = targetSdk
         }
 
         compileOptions {
@@ -68,5 +71,8 @@ private fun Project.configureAndroidCommon(
             targetCompatibility = JavaVersion.VERSION_11
         }
     }
+}
 
+private fun CommonExtension<*, *, *, *>.configureLint() {
+    lint { abortOnError = false }
 }

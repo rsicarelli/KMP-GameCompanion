@@ -21,6 +21,5 @@ plugins {
 
 detekt {
     buildUponDefaultConfig = true
-    allRules = false
-    config = files("$projectDir/config/detekt.yml")
+    config = files("$projectDir/build-logic/detekt.yml")
 }

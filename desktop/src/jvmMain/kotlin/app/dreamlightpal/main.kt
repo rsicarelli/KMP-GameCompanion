@@ -6,7 +6,7 @@ import androidx.compose.ui.window.singleWindowApplication
 import app.dreamlightpal.presentation.DreamlightPalScaffold
 
 fun main() = singleWindowApplication(
-    title = "Code Viewer",
+    title = "Dreamlight Pal",
     state = WindowState(width = 1280.dp, height = 768.dp),
 ) {
     DreamlightPalScaffold()
