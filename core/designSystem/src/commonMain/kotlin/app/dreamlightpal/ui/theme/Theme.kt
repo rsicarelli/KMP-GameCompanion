@@ -78,6 +78,7 @@ fun DreamlightPalTheme(
     val colors = if (useDarkTheme) DarkColors else LightColors
 
     MaterialTheme(
+        typography = AppTypography,
         colorScheme = colors,
         content = content
     )

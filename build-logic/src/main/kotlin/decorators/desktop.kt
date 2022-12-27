@@ -24,23 +24,43 @@ fun Project.setupDesktopApp(
     compose.configure<DesktopExtension> {
         application {
             mainClass = "app.dreamlightpal.MainKt"
-
             nativeDistributions {
-                targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
                 packageName = "DreamlightPal"
                 packageVersion = "1.0.0"
+                description = "todo"
+                copyright = "© 2022 rsicarelli. All rights reserved."
+                vendor = "rsicarelli"
+//                appResourcesRootDir.set(
+//                    project(":core:designSystem")
+//                        .layout.projectDirectory.dir("src/commonMain/resources")
+//                )
+
+                targetFormats(
+                    TargetFormat.Dmg,
+                    TargetFormat.Msi,
+                    TargetFormat.Deb
+                )
+
+                val iconsRoot = project.file("src/main/resources/drawables")
+
+                linux {
+                    //                    iconFile.set(iconsRoot.resolve("launcher_icons/linux.png"))
+                }
 
                 windows {
-                    menu = true
-                    // see https://wixtoolset.org/documentation/manual/v3/howtos/general/generate_guids.html
-                    upgradeUuid = ""
+                    //                    iconFile.set(iconsRoot.resolve("launcher_icons/windows.ico"))
+                    // Wondering what the heck is this? See : https://wixtoolset.org/documentation/manual/v3/howtos/general/generate_guids.html
+                    upgradeUuid = "//todo"
+                    menuGroup = packageName
+                    perUserInstall = true
                 }
 
                 macOS {
-                    // Use -Pcompose.desktop.mac.sign=true to sign and notarize.
                     bundleID = "app.dreamlightpal"
+                    //                    iconFile.set(iconsRoot.resolve("launcher_icons/macos.icns"))
                 }
             }
         }
+
     }
 }

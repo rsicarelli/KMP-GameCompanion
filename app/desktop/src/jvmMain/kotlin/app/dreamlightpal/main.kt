@@ -3,7 +3,7 @@ package app.dreamlightpal
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.singleWindowApplication
-import app.dreamlightpal.presentation.DreamlightPalScaffold
+import app.dreamlightpal.compose.DreamlightPalScaffold
 
 fun main() = singleWindowApplication(
     title = "Dreamlight Pal",
