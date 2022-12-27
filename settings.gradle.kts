@@ -25,10 +25,11 @@ dependencyResolutionManagement {
     }
 }
 
+rootProject.name = "DreamlightPal"
 rootDir.copyGradleToCompositeBuild()
 
 include(":desktop", ":android")
-include(":shared:threading", ":shared:designSystem", ":shared:collection", ":shared:logger")
+include(":core:threading", ":core:designSystem", ":core:collection", ":core:logger")
 
 /**
  * Sharing gradle.properties between composite builds avoids creating an extra daemon,

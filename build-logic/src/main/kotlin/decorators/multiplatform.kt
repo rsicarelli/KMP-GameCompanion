@@ -30,6 +30,15 @@ fun Project.setupMultiplatformLibrary(
             named("desktopMain") {
                 dependencies(desktopMainDependencies)
             }
+
+            removeAll { sourceSet ->
+                setOf(
+                    "androidAndroidTestRelease",
+                    "androidTestFixtures",
+                    "androidTestFixturesDebug",
+                    "androidTestFixturesRelease",
+                ).contains(sourceSet.name)
+            }
         }
     }
 

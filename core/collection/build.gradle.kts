@@ -16,7 +16,7 @@ setupMultiplatformLibrary(
         implementation(libs.squareup.sqldelight.extension.coroutines)
         implementation(libs.jetbrains.kotlinx.serialization.json)
 
-        compileOnly(projects.shared.logger)
+        compileOnly(projects.core.logger)
     },
     androidMainDependencies = {
         implementation(libs.squareup.sqldelight.driver.android)
