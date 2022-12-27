@@ -1,4 +1,4 @@
-package app.dreamlightpal.data
+package app.dreamlightpal.collection.data
 
 import android.content.Context
 import app.dreamlightpal.DreamlightPal

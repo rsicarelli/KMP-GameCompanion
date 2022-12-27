@@ -1,4 +1,4 @@
-package app.dreamlightpal.data
+package app.dreamlightpal.collection.data
 
 import app.dreamlightpal.DreamlightPal
 import com.squareup.sqldelight.db.SqlDriver

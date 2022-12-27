@@ -1,7 +1,7 @@
-package app.dreamlightpal.data
+package app.dreamlightpal.collection.data
 
 import app.dreamlightpal.DreamlightPal
-import app.dreamlightpal.domain.CollectionItem
+import app.dreamlightpal.collection.domain.CollectionItem
 import appdreamlightpal.Collection_item
 import com.squareup.sqldelight.ColumnAdapter
 import com.squareup.sqldelight.db.SqlDriver

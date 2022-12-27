@@ -15,9 +15,7 @@ java {
 
 dependencies {
     compileOnly(libs.gradlePlugin.kotlin)
-    compileOnly(libs.gradlePlugin.detekt)
     compileOnly(libs.gradlePlugin.android)
-    compileOnly(libs.gradlePlugin.kotlin.serializer)
     compileOnly(libs.gradlePlugin.compose)
     testCompileOnly(kotlin("test"))
 }

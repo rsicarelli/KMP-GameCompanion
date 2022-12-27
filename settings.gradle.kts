@@ -28,7 +28,7 @@ dependencyResolutionManagement {
 rootProject.name = "DreamlightPal"
 rootDir.copyGradleToCompositeBuild()
 
-include(":desktop", ":android")
+include(":app:desktop", ":app:android")
 include(":core:threading", ":core:designSystem", ":core:collection", ":core:logger")
 
 /**
