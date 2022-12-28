@@ -8,6 +8,15 @@ import com.arkivanov.decompose.value.Value
 @Stable
 interface HomeComponent {
 
+    val models: Value<Model>
+
+    fun setMultiPane(isMultiPane: Boolean)
+
+    @Immutable
+    data class Model(
+        val isMultiPane: Boolean = false,
+    )
+
     val listStack: Value<ChildStack<*, ListFeatureStack>>
     val detailStack: Value<ChildStack<*, DetailFeatureStack>>
 

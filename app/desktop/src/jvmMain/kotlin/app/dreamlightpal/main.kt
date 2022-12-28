@@ -8,8 +8,8 @@ import app.dreamlightpal.collection.CollectionModule
 import app.dreamlightpal.compose.DreamlightPalScaffold
 import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.DetailModule
-import app.dreamlightpal.home.DefaultHomeComponent
-import app.dreamlightpal.home.HomeContent
+import app.dreamlightpal.home.HomeComponentHolder
+import app.dreamlightpal.home.HomeScreen
 import app.dreamlightpal.list.ListComponentFactory
 import app.dreamlightpal.list.ListModule
 import app.dreamlightpal.threading.ThreadingModule
@@ -37,13 +37,13 @@ fun App(lifecycleRegistry: LifecycleRegistry) = withDI(di) {
     val listComponentFactory by di.instance<ListComponentFactory>()
     val detailComponentFactory by di.instance<DetailComponentFactory>()
 
-    val homeComponent = DefaultHomeComponent(
+    val homeComponent = HomeComponentHolder(
         componentContext = DefaultComponentContext(lifecycle = lifecycleRegistry),
         listComponentFactory = listComponentFactory,
         detailComponentFactory = detailComponentFactory
     )
 
     DreamlightPalScaffold {
-        HomeContent(homeComponent)
+        HomeScreen(homeComponent)
     }
 }
