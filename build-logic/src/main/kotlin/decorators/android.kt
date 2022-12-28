@@ -9,6 +9,7 @@ import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.withGroovyBuilder
 
 internal fun Project.configureAndroidLibrary() {
     configureAndroidCommon()
@@ -69,6 +70,12 @@ private fun Project.configureAndroidCommon(
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_11
             targetCompatibility = JavaVersion.VERSION_11
+        }
+
+        withGroovyBuilder {
+            "kotlinOptions" {
+                setProperty("jvmTarget", "11")
+            }
         }
     }
 }

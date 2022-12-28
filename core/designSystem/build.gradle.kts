@@ -17,7 +17,6 @@ setupMultiplatformLibrary(
         api(compose.dependencies.material3)
     },
     androidMainDependencies = {
-        api(libs.androidx.appcompat)
         api(libs.androidx.core)
     },
     desktopMainDependencies = {

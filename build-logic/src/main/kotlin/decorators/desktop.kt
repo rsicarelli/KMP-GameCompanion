@@ -30,10 +30,6 @@ fun Project.setupDesktopApp(
                 description = "todo"
                 copyright = "© 2022 rsicarelli. All rights reserved."
                 vendor = "rsicarelli"
-//                appResourcesRootDir.set(
-//                    project(":core:designSystem")
-//                        .layout.projectDirectory.dir("src/commonMain/resources")
-//                )
 
                 targetFormats(
                     TargetFormat.Dmg,

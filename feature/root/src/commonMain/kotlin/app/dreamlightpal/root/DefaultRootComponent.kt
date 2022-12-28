@@ -1,4 +1,4 @@
-package app.dreamlightpal.home
+package app.dreamlightpal.root
 
 import app.dreamlightpal.navigation.HomeComponent
 import app.dreamlightpal.navigation.RootComponent
@@ -8,6 +8,7 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.parcelable.Parcelable
+import com.arkivanov.essenty.parcelable.Parcelize
 
 class DefaultRootComponent(
     componentContext: ComponentContext,
@@ -31,6 +32,8 @@ class DefaultRootComponent(
         }
 
     private sealed interface Config : Parcelable {
+
+        @Parcelize
         object Home : Config
     }
 }

@@ -1,4 +1,4 @@
-package app.dreamlightpal.home
+package app.dreamlightpal.root
 
 import app.dreamlightpal.navigation.HomeComponent
 import com.arkivanov.decompose.ComponentContext
