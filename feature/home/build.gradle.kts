@@ -9,11 +9,11 @@ plugins {
 
 setupMultiplatformLibrary(
     commonMainDependencies = {
-        implementation(projects.core.designSystem)
-        implementation(projects.core.navigation)
-        implementation(projects.feature.list)
-        implementation(projects.feature.detail)
-        implementation(libs.arkivanov.decompose)
-        implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
+        compileOnly(projects.core.designSystem)
+        compileOnly(projects.core.navigation)
+        compileOnly(projects.feature.list)
+        compileOnly(projects.feature.detail)
+        compileOnly(libs.arkivanov.decompose)
+        compileOnly(libs.arkivanov.decompose.extensions.compose.jetbrains)
     }
 )

@@ -1,8 +1,5 @@
 @file:Suppress("UnstableApiUsage")
-
 rootProject.name = "build-logic"
-
-enableFeaturePreview("VERSION_CATALOGS")
 
 dependencyResolutionManagement {
     repositories {

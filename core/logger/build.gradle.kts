@@ -8,7 +8,6 @@ plugins {
 
 setupMultiplatformLibrary(
     commonMainDependencies = {
-        implementation(kotlin("stdlib-common"))
         api(libs.touchlab.kermit)
     }
 )

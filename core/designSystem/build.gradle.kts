@@ -10,17 +10,7 @@ plugins {
 setupMultiplatformLibrary(
     sequenceOf(""),
     commonMainDependencies = {
-        api(compose.dependencies.runtime)
-        api(compose.dependencies.foundation)
-
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
         api(compose.dependencies.material3)
-        api(compose.dependencies.preview)
-    },
-    androidMainDependencies = {
-        api(libs.androidx.core)
-    },
-    desktopMainDependencies = {
-        api(compose.dependencies.desktop.common)
     }
 )

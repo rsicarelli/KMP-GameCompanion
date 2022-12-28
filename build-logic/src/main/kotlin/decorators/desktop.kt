@@ -13,7 +13,9 @@ fun Project.setupDesktopApp(
     dependencyHandler: KotlinDependencyHandler.() -> Unit = {},
 ) {
     extensions.configure<KotlinMultiplatformExtension> {
-        jvm {}
+        jvm {
+            withJava()
+        }
         sourceSets {
             named("jvmMain") {
                 dependencies(dependencyHandler)
