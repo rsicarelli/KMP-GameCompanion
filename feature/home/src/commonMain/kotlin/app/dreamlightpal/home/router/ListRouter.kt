@@ -1,8 +1,8 @@
 package app.dreamlightpal.home.router
 
+import app.dreamlightpal.home.HomeComponent
 import app.dreamlightpal.list.ListComponentFactory
 import app.dreamlightpal.list.OnItemSelected
-import app.dreamlightpal.navigation.HomeComponent.ListFeatureStack
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
@@ -21,7 +21,7 @@ class ListRouter(
     private val navigation: StackNavigation<Config> = StackNavigation(),
 ) {
 
-    val stack: Value<ChildStack<Config, ListFeatureStack>> =
+    val stack: Value<ChildStack<Config, HomeComponent.ListFeatureStack>> =
         componentContext.childStack(
             source = navigation,
             initialConfiguration = Config.List,
@@ -29,9 +29,9 @@ class ListRouter(
             childFactory = ::createChild,
         )
 
-    private fun createChild(config: Config, componentContext: ComponentContext): ListFeatureStack =
+    private fun createChild(config: Config, componentContext: ComponentContext): HomeComponent.ListFeatureStack =
         when (config) {
-            is Config.List -> ListFeatureStack.List(listStackFactory(componentContext, onItemSelected))
+            is Config.List -> HomeComponent.ListFeatureStack.List(listStackFactory(componentContext, onItemSelected))
         }
 
     fun show() {

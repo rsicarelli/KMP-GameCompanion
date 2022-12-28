@@ -34,7 +34,7 @@ private object ProjectDefaults {
 
     val coreModules = sequenceOf(
         "collection", "designSystem",
-        "logger", "threading", "navigation"
+        "logger", "threading"
     ).map { ":core:$it" }.asIterable()
 
     val featureModules = sequenceOf(

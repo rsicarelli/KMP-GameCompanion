@@ -13,7 +13,6 @@ setupDesktopApp(
         implementation(projects.core.collection)
         implementation(projects.core.designSystem)
         implementation(projects.core.logger)
-        implementation(projects.core.navigation)
         implementation(projects.core.threading)
 
         implementation(projects.feature.home)

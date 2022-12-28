@@ -11,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.detail.DetailScreen
 import app.dreamlightpal.list.ListScreen
-import app.dreamlightpal.navigation.HomeComponent
 import com.arkivanov.decompose.ExperimentalDecomposeApi
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
@@ -71,7 +70,7 @@ private fun ListPane(stack: Value<ChildStack<*, HomeComponent.ListFeatureStack>>
         animation = stackAnimation(fade()),
     ) {
         when (val child = it.instance) {
-            is HomeComponent.ListFeatureStack.List -> ListScreen(child.component)
+            is HomeComponent.ListFeatureStack.List -> ListScreen(listComponent = child.component)
         }
     }
 }

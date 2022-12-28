@@ -2,9 +2,7 @@ package app.dreamlightpal.home.router
 
 import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.OnClose
-import app.dreamlightpal.navigation.HomeComponent.DetailFeatureStack
-import app.dreamlightpal.navigation.HomeComponent.DetailFeatureStack.Details
-import app.dreamlightpal.navigation.HomeComponent.DetailFeatureStack.Hidden
+import app.dreamlightpal.home.HomeComponent
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
@@ -23,7 +21,7 @@ class DetailRouter(
 
     private val navigation = StackNavigation<Config>()
 
-    val stack: Value<ChildStack<Config, DetailFeatureStack>> =
+    val stack: Value<ChildStack<Config, HomeComponent.DetailFeatureStack>> =
         componentContext.childStack(
             source = navigation,
             initialConfiguration = Config.Hidden,
@@ -31,10 +29,10 @@ class DetailRouter(
             childFactory = ::createChild,
         )
 
-    private fun createChild(config: Config, componentContext: ComponentContext): DetailFeatureStack {
+    private fun createChild(config: Config, componentContext: ComponentContext): HomeComponent.DetailFeatureStack {
         val detailFeatureStack = when (config) {
-            is Config.Detail -> Details(detailComponentFactory(componentContext, onClose))
-            is Config.Hidden -> Hidden
+            is Config.Detail -> HomeComponent.DetailFeatureStack.Details(detailComponentFactory(componentContext, onClose))
+            is Config.Hidden -> HomeComponent.DetailFeatureStack.Hidden
         }
         return detailFeatureStack
     }
