@@ -29,6 +29,7 @@ internal fun Project.configureAndroidLibrary() {
         sourceSets {
             named("main") {
                 manifest.srcFile("src/androidMain/AndroidManifest.xml")
+                res.srcDirs("src/androidMain/res")
             }
         }
     }
@@ -46,6 +47,10 @@ fun Project.configureAndroidApp(
             this.applicationId = applicationId
             this.versionCode = versionCode
             this.versionName = versionName
+        }
+
+        buildFeatures {
+            compose = true
         }
 
         configureLint()

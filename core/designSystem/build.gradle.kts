@@ -15,6 +15,7 @@ setupMultiplatformLibrary(
 
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
         api(compose.dependencies.material3)
+        api(compose.dependencies.preview)
     },
     androidMainDependencies = {
         api(libs.androidx.core)

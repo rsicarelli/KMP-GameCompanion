@@ -1,9 +1,10 @@
 package app.dreamlightpal.collection
 
 import app.dreamlightpal.collection.data.DriverFactory
-import org.koin.core.module.dsl.factoryOf
-import org.koin.dsl.module
+import org.kodein.di.DI
+import org.kodein.di.bind
+import org.kodein.di.factory
 
-actual val DriverFactoryModule = module {
-    factoryOf(::DriverFactory)
+internal actual val DriverFactoryModule = DI.Module("Collection driver factory") {
+    bind<DriverFactory>() with factory { DriverFactory() }
 }

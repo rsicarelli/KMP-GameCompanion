@@ -14,15 +14,18 @@ configureAndroidApp(
 )
 
 dependencies {
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.core)
-    implementation(projects.core.designSystem)
-
     implementation(projects.core.collection)
+    implementation(projects.core.designSystem)
+    implementation(projects.core.logger)
     implementation(projects.core.navigation)
+    implementation(projects.core.threading)
+
     implementation(projects.feature.home)
-    implementation(projects.feature.root)
+    implementation(projects.feature.list)
+    implementation(projects.feature.detail)
+
     implementation(libs.arkivanov.decompose)
     implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.core)
 }

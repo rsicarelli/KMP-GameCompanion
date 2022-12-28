@@ -38,7 +38,7 @@ private object ProjectDefaults {
     ).map { ":core:$it" }.asIterable()
 
     val featureModules = sequenceOf(
-        "home", "root"
+        "home", "list", "detail"
     ).map { ":feature:$it" }.asIterable()
 
     val sharedFiles = sequenceOf(

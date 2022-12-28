@@ -1,5 +1,5 @@
 [versions]
-androidBuildTools = "7.3.1"
+androidBuildTools = "7.2.2"
 detekt = "1.22.0"
 jetbrainsCompose = "1.2.2"
 kotlin = "1.7.20"
@@ -10,6 +10,7 @@ androidxCore = "1.3.2"
 androidxActivity = "1.3.1"
 androidxTestCore = "1.4.0"
 koin = "3.2.2"
+kodein = "7.16.0"
 kermit = "1.2.2"
 kmpNativecoroutines = "0.13.2"
 sqlDelight = "1.5.4"
@@ -31,6 +32,12 @@ androidx-activity = { group = "androidx.activity", name = "activity-ktx", versio
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidxTestCore" }
 
+
+#Kodein
+kodein-di = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
+kodein-di-framework-compose = { module = "org.kodein.di:kodein-di-framework-compose", version.ref = "kodein" }
+kodein-di-framework-android-x = { module = "org.kodein.di:kodein-di-framework-android-x", version.ref = "kodein" }
+
 #Koin
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
@@ -47,7 +54,7 @@ squareup-sqldelight-extension-coroutines = { module = "com.squareup.sqldelight:c
 #Decompose
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 arkivanov-decompose-extensions-compose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
-arkivanov-essenty-parcelable = { module = "com.arkivanov.essenty:parcelable", version = "0.7.0"}
+arkivanov-essenty-parcelable = { module = "com.arkivanov.essenty:parcelable", version = "0.7.0" }
 
 [plugins]
 arturbosch-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
