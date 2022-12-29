@@ -30,42 +30,42 @@ val AppTypography by lazy {
             letterSpacing = 0.sp,
         ),
         headlineLarge = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
             lineHeight = 40.sp,
             letterSpacing = 0.sp,
         ),
         headlineMedium = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.SemiBold,
             fontSize = 28.sp,
             lineHeight = 36.sp,
             letterSpacing = 0.sp,
         ),
         headlineSmall = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.SemiBold,
             fontSize = 24.sp,
             lineHeight = 32.sp,
             letterSpacing = 0.sp,
         ),
         titleLarge = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.Bold,
-            fontSize = 22.sp,
+            fontSize = 18.sp,
             lineHeight = 28.sp,
             letterSpacing = 0.sp,
         ),
         titleMedium = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
             lineHeight = 24.sp,
             letterSpacing = 0.1.sp,
         ),
         titleSmall = TextStyle(
-            fontFamily = NotoSans,
+            fontFamily = JosefinSans,
             fontWeight = FontWeight.Bold,
             fontSize = 14.sp,
             lineHeight = 20.sp,
@@ -116,4 +116,3 @@ val AppTypography by lazy {
     )
 }
 expect val JosefinSans: FontFamily
-expect val NotoSans: FontFamily

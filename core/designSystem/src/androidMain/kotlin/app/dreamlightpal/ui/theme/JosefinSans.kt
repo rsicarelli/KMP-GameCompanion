@@ -11,8 +11,3 @@ actual val JosefinSans: FontFamily = FontFamily(
     Font(R.font.josefin_sans_medium, FontWeight.Medium),
     Font(R.font.josefin_sans_semibold, FontWeight.SemiBold),
 )
-
-actual val NotoSans: FontFamily = FontFamily(
-    Font(R.font.noto_sans_bold, FontWeight.SemiBold),
-)
-

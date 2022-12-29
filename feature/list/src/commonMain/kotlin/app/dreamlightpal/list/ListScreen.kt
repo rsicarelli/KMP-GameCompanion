@@ -4,14 +4,15 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -41,17 +42,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.compose.rememberAsyncImagePainter
 import app.dreamlightpal.list.ListComponent.ListState
 import app.dreamlightpal.list.ListScreenTokens.GridArrangement
 import app.dreamlightpal.list.ListScreenTokens.GridColumns
 import app.dreamlightpal.list.ListScreenTokens.GridPaddingValues
-import app.dreamlightpal.list.ListScreenTokens.ListItemAspectRatio
 import app.dreamlightpal.list.ListScreenTokens.ListItemElevation
-import app.dreamlightpal.list.ListScreenTokens.ListItemHorizontalPadding
-import app.dreamlightpal.list.ListScreenTokens.ListItemImageSize
-import app.dreamlightpal.list.ListScreenTokens.ListItemTopPadding
 
 @Composable
 fun ListScreen(
@@ -80,6 +78,7 @@ fun ListScreen(
             onDone = {
             }
         )
+
         LazyCollectionList(
             itemList = listState.collectionItems
         )
@@ -103,7 +102,9 @@ private fun LazyCollectionList(
             items = itemList,
             key = ListState.CollectionListItem::itemId
         ) { listItem ->
-            ListItem(collectionListItem = listItem)
+            BoxWithConstraints {
+                ListItem(collectionListItem = listItem)
+            }
         }
     }
 }
@@ -112,32 +113,39 @@ private fun LazyCollectionList(
 private fun ListItem(
     modifier: Modifier = Modifier,
     collectionListItem: ListState.CollectionListItem,
+) = Card(
+    modifier = modifier.fillMaxWidth().aspectRatio(1F),
+    shape = MaterialTheme.shapes.large,
+    elevation = CardDefaults.cardElevation(defaultElevation = ListItemElevation)
 ) {
-    Card(
-        modifier = modifier.fillMaxWidth().aspectRatio(ListItemAspectRatio),
-        shape = MaterialTheme.shapes.large,
-        elevation = CardDefaults.cardElevation(defaultElevation = ListItemElevation)
-    ) {
-
+    Column {
         Image(
-            modifier = Modifier
-                .size(ListItemImageSize)
-                .align(Alignment.CenterHorizontally)
-                .padding(top = ListItemTopPadding),
+            modifier = Modifier.fillMaxWidth()
+                .heightIn(min = 88.dp)
+                .weight(0.68F)
+                .padding(horizontal = 24.dp)
+                .then(Modifier.padding(top = 24.dp)),
             painter = rememberAsyncImagePainter(collectionListItem.imageUrl),
             contentDescription = null
         )
 
         Text(
-            modifier = Modifier
-                .align(Alignment.CenterHorizontally)
-                .padding(top = ListItemTopPadding)
-                .then(Modifier.padding(horizontal = ListItemHorizontalPadding)),
-
-            text = collectionListItem.localizedNameKey
+            modifier = Modifier.padding(horizontal = ListScreenTokens.ListItemHorizontalPadding).weight(0.32F).padding(16.dp).align(Alignment.CenterHorizontally),
+            text = collectionListItem.localizedNameKey,
+            maxLines = 1,
+            style = MaterialTheme.typography.titleLarge,
+            overflow = TextOverflow.Ellipsis,
         )
-
     }
+
+    //
+    //    Column(
+    //        modifier = Modifier.fillMaxSize().padding(top = 16.dp),
+    //        verticalArrangement = Arrangement.spacedBy(16.dp),
+    //        horizontalAlignment = Alignment.CenterHorizontally
+    //    ) {
+    //
+    //    }
 }
 
 @Composable
@@ -223,7 +231,7 @@ private object ListScreenTokens {
     const val ListItemAspectRatio = 0.78F
     @Stable val GridArrangement = Arrangement.spacedBy(16.dp)
     @Stable val GridPaddingValues = PaddingValues(16.dp)
-    @Stable val GridColumns = GridCells.Adaptive(130.dp)
+    @Stable val GridColumns = GridCells.Adaptive(180.dp)
     @Stable val ListItemElevation = 3.dp
     @Stable val ListItemImageSize = 88.dp
     @Stable val ListItemTopPadding = 16.dp

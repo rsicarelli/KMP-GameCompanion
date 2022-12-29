@@ -10,7 +10,3 @@ actual val JosefinSans = FontFamily(
     Font("fonts/josefin_sans_medium.ttf", FontWeight.Medium),
     Font("fonts/josefin_sans_semibold.ttf", FontWeight.SemiBold),
 )
-
-actual val NotoSans = FontFamily(
-    Font("fonts/noto_sans_bolt.ttf", FontWeight.Bold)
-)
