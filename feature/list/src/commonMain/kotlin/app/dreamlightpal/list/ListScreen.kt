@@ -89,7 +89,7 @@ private fun LazyCollectionList(
     ) {
         items(
             items = itemList,
-            key = ListState.CollectionListItem::itemId
+            key = ListState.CollectionListItem::localizedNameKey
         ) { listItem ->
             BoxWithConstraints {
                 ListItem(collectionListItem = listItem)
