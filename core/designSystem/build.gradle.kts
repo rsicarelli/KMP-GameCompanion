@@ -12,8 +12,11 @@ setupMultiplatformLibrary(
     commonMainDependencies = {
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
         implementation(compose.dependencies.material3)
+        api(compose.dependencies.materialIconsExtended)
     },
     androidMainDependencies = {
+        compileOnly(libs.androidx.core)
+        implementation(libs.google.accompanist.systemuicontroller)
         implementation(libs.coil.compose)
     },
     desktopMainDependencies = {

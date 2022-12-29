@@ -6,6 +6,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import app.dreamlightpal.compose.StatusBarColorEffect
 
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,
@@ -73,6 +74,13 @@ fun DreamlightPalTheme(
     content: @Composable () -> Unit,
 ) {
     val colors = if (useDarkTheme) DarkColors else LightColors
+
+    StatusBarColorEffect(
+        darkTheme = isSystemInDarkTheme(),
+        primary = colors.primary,
+        background = colors.background,
+        surface = colors.surface,
+    )
 
     MaterialTheme(
         typography = AppTypography,

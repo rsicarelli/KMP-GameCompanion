@@ -15,6 +15,7 @@ kermit = "1.2.2"
 sqlDelight = "1.5.4"
 loadTheImage = "1.0.5"
 coilCompose = "2.2.2"
+accompanist = "0.28.0"
 
 [libraries]
 
@@ -31,6 +32,9 @@ jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-co
 androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxComposeActivity" }
 androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidxTestCore" }
+
+#Accompanist
+google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 
 #ImageLoading
 load-the-image = { module = "com.github.ltttttttttttt:load-the-image", version.ref = "loadTheImage" }

@@ -1,50 +1,39 @@
 package app.dreamlightpal.list
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActionScope
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.rounded.FilterAlt
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.Saver
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.compose.rememberAsyncImagePainter
+import app.dreamlightpal.compose.statusBarPadding
 import app.dreamlightpal.list.ListComponent.ListState
 import app.dreamlightpal.list.ListScreenTokens.GridArrangement
 import app.dreamlightpal.list.ListScreenTokens.GridColumns
@@ -58,32 +47,32 @@ fun ListScreen(
 ) {
     val listState: ListState by listComponent.state.collectAsState()
 
-    Column(
-        modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+    Box(
+        modifier = modifier.fillMaxSize().statusBarPadding(),
     ) {
-        Text(
-            modifier = Modifier.padding(16.dp),
-            text = "Hi, Pal!",
-            style = MaterialTheme.typography.displayLarge
-        )
-
-        SearchBar(
-            modifier = Modifier.padding(8.dp),
-            hint = "Search...",
-            contentDescription = "",
-            onTextChanged = {
-
-            },
-            onDone = {
-            }
-        )
-
         LazyCollectionList(
+            modifier = Modifier.fillMaxSize(),
             itemList = listState.collectionItems
         )
-    }
 
+        ExtendedFloatingActionButton(
+            modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
+            onClick = {},
+            content = {
+                Icon(
+                    modifier = Modifier.size(24.dp),
+                    imageVector = Icons.Rounded.FilterAlt,
+                    contentDescription = "Filter"
+                )
+
+                Text(
+                    modifier = Modifier.padding(horizontal = 8.dp),
+                    text = "Filter",
+                    style = MaterialTheme.typography.labelLarge
+                )
+            }
+        )
+    }
 }
 
 @Composable
@@ -92,7 +81,7 @@ private fun LazyCollectionList(
     itemList: List<ListState.CollectionListItem>,
 ) {
     LazyVerticalGrid(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier,
         columns = GridColumns,
         verticalArrangement = GridArrangement,
         horizontalArrangement = GridArrangement,
@@ -115,7 +104,7 @@ private fun ListItem(
     collectionListItem: ListState.CollectionListItem,
 ) = Card(
     modifier = modifier.fillMaxWidth().aspectRatio(1F),
-    shape = MaterialTheme.shapes.large,
+    shape = RoundedCornerShape(28.dp),
     elevation = CardDefaults.cardElevation(defaultElevation = ListItemElevation)
 ) {
     Column(
@@ -139,93 +128,6 @@ private fun ListItem(
             style = MaterialTheme.typography.titleLarge,
             overflow = TextOverflow.Ellipsis,
         )
-    }
-
-    //
-    //    Column(
-    //        modifier = Modifier.fillMaxSize().padding(top = 16.dp),
-    //        verticalArrangement = Arrangement.spacedBy(16.dp),
-    //        horizontalAlignment = Alignment.CenterHorizontally
-    //    ) {
-    //
-    //    }
-}
-
-@Composable
-fun SearchBar(
-    modifier: Modifier = Modifier,
-    hint: String,
-    contentDescription: String,
-    saver: Saver<MutableState<TextFieldValue>, String> = Saver(
-        save = { it.value.text },
-        restore = { mutableStateOf(TextFieldValue(it)) }
-    ),
-    onTextChanged: (input: String) -> Unit,
-    onDone: (KeyboardActionScope.() -> Unit),
-) {
-    val textState = rememberSaveable(saver = saver) { mutableStateOf(TextFieldValue()) }
-
-    BasicTextField(
-        modifier = modifier
-            .background(
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12F),
-                shape = CircleShape,
-            )
-            .padding(12.dp)
-            .fillMaxWidth(),
-        value = textState.value,
-        onValueChange = {
-            textState.value = it
-            onTextChanged(it.text)
-        },
-        singleLine = true,
-        keyboardOptions = KeyboardOptions(
-            autoCorrect = false,
-            imeAction = ImeAction.Done
-        ),
-        keyboardActions = KeyboardActions(onDone = onDone),
-        cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-        textStyle = MaterialTheme.typography.bodyLarge,
-        decorationBox = { innerTextField ->
-            SearchDecorationBox(
-                contentDescription = contentDescription,
-                textState = textState.value,
-                hint = hint,
-                innerTextField = innerTextField
-            )
-        }
-    )
-}
-
-@Composable
-private fun SearchDecorationBox(
-    contentDescription: String,
-    textState: TextFieldValue,
-    hint: String,
-    innerTextField: @Composable () -> Unit,
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        Icon(
-            imageVector = Icons.Default.Search,
-            contentDescription = contentDescription,
-            tint = Color(0xFF3D4B6F)
-        )
-
-        if (textState.text.isEmpty()) {
-            Box(Modifier.weight(1f)) {
-                Text(
-                    text = hint,
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = Color(0xFF3D4B6F)
-                )
-                innerTextField()
-            }
-        } else {
-            innerTextField()
-        }
     }
 }
 
