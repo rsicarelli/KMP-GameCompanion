@@ -36,7 +36,6 @@ fun Project.setupMultiplatformLibrary(
                     dependencies {
                         compileOnly(compose.dependencies.runtime)
                         compileOnly(compose.dependencies.foundation)
-                        compileOnly(compose.dependencies.preview)
                         compileOnly(compose.dependencies.material3)
                     }
                 }

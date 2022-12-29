@@ -11,12 +11,12 @@ setupMultiplatformLibrary(
     enableCompose = true,
     commonMainDependencies = {
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-        api(compose.dependencies.material3)
+        implementation(compose.dependencies.material3)
     },
     androidMainDependencies = {
-        api(libs.androidx.core)
+        implementation(libs.coil.compose)
     },
     desktopMainDependencies = {
-        api(compose.dependencies.desktop.common)
-    }
+        implementation(libs.load.the.image)
+    },
 )
