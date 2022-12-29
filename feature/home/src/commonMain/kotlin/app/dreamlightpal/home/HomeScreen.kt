@@ -7,10 +7,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.DetailScreen
+import app.dreamlightpal.list.ListComponentFactory
 import app.dreamlightpal.list.ListScreen
+import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.ExperimentalDecomposeApi
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
@@ -18,13 +22,22 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stac
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.value.Value
+import org.kodein.di.DI
+import org.kodein.di.compose.rememberInstance
+import org.kodein.di.compose.withDI
 
 private val MULTI_PANE_WIDTH_THRESHOLD = 800.dp
 private const val LIST_PANE_WEIGHT = 0.4F
 private const val DETAILS_PANE_WEIGHT = 0.6F
 
 @Composable
-fun HomeScreen(homeComponent: HomeComponent) {
+fun HomeScreen(componentContext: ComponentContext, di: DI) = withDI(di) {
+    val listComponentFactory by rememberInstance<ListComponentFactory>()
+    val detailComponentFactory by rememberInstance<DetailComponentFactory>()
+
+    val homeComponent = remember(componentContext, listComponentFactory, detailComponentFactory) {
+        HomeComponentHolder(componentContext, listComponentFactory, detailComponentFactory)
+    }
 
     BoxWithConstraints(modifier = Modifier) {
         val model by homeComponent.models.subscribeAsState()

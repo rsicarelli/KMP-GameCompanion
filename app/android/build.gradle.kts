@@ -23,8 +23,10 @@ dependencies {
     implementation(projects.feature.list)
     implementation(projects.feature.detail)
 
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.kodein.di)
+    implementation(libs.kodein.di.framework.compose)
     implementation(libs.arkivanov.decompose)
     implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.core)
 }

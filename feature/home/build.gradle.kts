@@ -14,6 +14,8 @@ setupMultiplatformLibrary(
         compileOnly(projects.core.designSystem)
         compileOnly(projects.feature.list)
         compileOnly(projects.feature.detail)
+        compileOnly(libs.kodein.di)
+        compileOnly(libs.kodein.di.framework.compose)
         compileOnly(libs.arkivanov.decompose)
         compileOnly(libs.arkivanov.decompose.extensions.compose.jetbrains)
     }
