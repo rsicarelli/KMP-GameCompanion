@@ -1,6 +1,5 @@
 package app.dreamlightpal.list
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,12 +11,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -25,8 +24,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.compose.rememberAsyncImagePainter
 import app.dreamlightpal.list.ListComponent.ListState
+import app.dreamlightpal.list.ListScreenDefaults.GridArrangement
+import app.dreamlightpal.list.ListScreenDefaults.GridColumns
+import app.dreamlightpal.list.ListScreenDefaults.GridPaddingValues
+import app.dreamlightpal.list.ListScreenDefaults.ListItemAspectRatio
+import app.dreamlightpal.list.ListScreenDefaults.ListItemElevation
+import app.dreamlightpal.list.ListScreenDefaults.ListItemHorizontalPadding
+import app.dreamlightpal.list.ListScreenDefaults.ListItemImageSize
+import app.dreamlightpal.list.ListScreenDefaults.ListItemTopPadding
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ListScreen(
     modifier: Modifier = Modifier,
@@ -34,47 +40,76 @@ fun ListScreen(
 ) {
     val listState: ListState by listComponent.state.collectAsState()
 
-    val quickPicksLazyGridState = rememberLazyGridState()
-
-    val arrangement = Arrangement.spacedBy(16.dp)
-
     LazyVerticalGrid(
-        state = quickPicksLazyGridState,
-        columns = GridCells.Adaptive(130.dp),
-        verticalArrangement = arrangement,
-        horizontalArrangement = arrangement,
-        contentPadding = PaddingValues(16.dp),
-        modifier = Modifier.fillMaxSize()
-
+        modifier = modifier.fillMaxSize(),
+        columns = GridColumns,
+        verticalArrangement = GridArrangement,
+        horizontalArrangement = GridArrangement,
+        contentPadding = GridPaddingValues,
     ) {
-        items(listState.collectionItems, ListState.CollectionListItem::itemId) { listItem ->
+        items(
+            items = listState.collectionItems,
+            key = ListState.CollectionListItem::itemId
+        ) { listItem ->
             ListItem(collectionListItem = listItem)
         }
     }
 }
 
 @Composable
-fun ListItem(
+private fun ListItem(
     modifier: Modifier = Modifier,
     collectionListItem: ListState.CollectionListItem,
 ) {
     Card(
-        modifier = modifier.fillMaxWidth().aspectRatio(0.78F),
+        modifier = modifier.fillMaxWidth().aspectRatio(ListItemAspectRatio),
         shape = MaterialTheme.shapes.large,
-        elevation = CardDefaults.cardElevation(defaultElevation = 16.dp)
+        elevation = ListItemElevation
     ) {
 
         Image(
-            modifier = Modifier.size(72.dp).align(Alignment.CenterHorizontally).padding(top = 8.dp),
+            modifier = Modifier
+                .size(ListItemImageSize)
+                .align(Alignment.CenterHorizontally)
+                .padding(top = ListItemTopPadding),
             painter = rememberAsyncImagePainter(collectionListItem.imageUrl),
-            contentDescription = ""
+            contentDescription = null
         )
 
         Text(
-            modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp).then(Modifier.padding(horizontal = 8.dp)),
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(top = ListItemTopPadding)
+                .then(Modifier.padding(horizontal = ListItemHorizontalPadding)),
+
             text = collectionListItem.localizedNameKey
         )
 
     }
 }
 
+private object ListScreenDefaults {
+
+    const val ListItemAspectRatio = 0.78F
+
+    @Stable
+    val GridArrangement = Arrangement.spacedBy(16.dp)
+
+    @Stable
+    val GridPaddingValues = PaddingValues(16.dp)
+
+    @Stable
+    val GridColumns = GridCells.Adaptive(130.dp)
+
+    @Stable
+    val ListItemElevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+
+    @Stable
+    val ListItemImageSize = 72.dp
+
+    @Stable
+    val ListItemTopPadding = 8.dp
+
+    @Stable
+    val ListItemHorizontalPadding = 8.dp
+}
