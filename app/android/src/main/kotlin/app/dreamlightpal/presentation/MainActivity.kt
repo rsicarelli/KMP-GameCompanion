@@ -32,7 +32,8 @@ class MainActivity : ComponentActivity(), DIAware {
             DreamlightPalTheme {
                 HomeScreen(
                     componentContext = componentContext,
-                    di = di
+                    di = di,
+                    onToggleTheme = {},
                 )
             }
         }

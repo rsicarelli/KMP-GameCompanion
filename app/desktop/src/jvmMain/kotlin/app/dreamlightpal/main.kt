@@ -1,6 +1,10 @@
 package app.dreamlightpal
 
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.singleWindowApplication
@@ -22,8 +26,17 @@ fun main() = singleWindowApplication(
     val di = remember { DI { importAll(CollectionModule, ThreadingModule, DetailModule, ListModule) } }
     val lifecycle = remember { LifecycleRegistry() }
     val componentContext = remember(lifecycle) { DefaultComponentContext(lifecycle) }
+    val isSystemInDarkTheme = isSystemInDarkTheme()
+    var darkTheme by remember { mutableStateOf(isSystemInDarkTheme) }
 
-    DreamlightPalTheme {
-        HomeScreen(componentContext, di)
+    DreamlightPalTheme(useDarkTheme = darkTheme) {
+        HomeScreen(
+            componentContext = componentContext,
+            di = di,
+            isDarkMode = darkTheme,
+            onToggleTheme = {
+                darkTheme = !darkTheme
+            }
+        )
     }
 }

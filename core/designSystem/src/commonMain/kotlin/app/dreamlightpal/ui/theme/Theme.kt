@@ -76,7 +76,7 @@ fun DreamlightPalTheme(
     val colors = if (useDarkTheme) DarkColors else LightColors
 
     StatusBarColorEffect(
-        darkTheme = isSystemInDarkTheme(),
+        darkTheme = useDarkTheme,
         primary = colors.primary,
         background = colors.background,
         surface = colors.surface,

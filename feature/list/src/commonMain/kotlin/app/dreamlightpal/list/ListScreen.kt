@@ -16,10 +16,11 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.FilterAlt
+import androidx.compose.material.icons.rounded.FilterList
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -52,24 +53,20 @@ fun ListScreen(
     ) {
         LazyCollectionList(
             modifier = Modifier.fillMaxSize(),
-            itemList = listState.collectionItems
+            itemList = listState.collectionItems,
         )
 
-        ExtendedFloatingActionButton(
+        FloatingActionButton(
             modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
+            shape = FloatingActionButtonDefaults.largeShape,
             onClick = {},
             content = {
                 Icon(
                     modifier = Modifier.size(24.dp),
-                    imageVector = Icons.Rounded.FilterAlt,
+                    imageVector = Icons.Rounded.FilterList,
                     contentDescription = "Filter"
                 )
 
-                Text(
-                    modifier = Modifier.padding(horizontal = 8.dp),
-                    text = "Filter",
-                    style = MaterialTheme.typography.labelLarge
-                )
             }
         )
     }
@@ -113,7 +110,7 @@ private fun ListItem(
     ) {
         Image(
             modifier = Modifier.fillMaxWidth()
-                .weight(0.75F),
+                .weight(0.72F),
             painter = rememberAsyncImagePainter(collectionListItem.imageUrl),
             contentDescription = null,
             contentScale = ContentScale.FillHeight,
@@ -121,7 +118,7 @@ private fun ListItem(
 
         Text(
             modifier = Modifier.padding(horizontal = ListScreenTokens.ListItemHorizontalPadding)
-                .weight(0.24F)
+                .weight(0.27F)
                 .align(Alignment.CenterHorizontally),
             text = collectionListItem.localizedNameKey,
             maxLines = 1,
@@ -136,7 +133,7 @@ private object ListScreenTokens {
     const val ListItemAspectRatio = 0.78F
     @Stable val GridArrangement = Arrangement.spacedBy(16.dp)
     @Stable val GridPaddingValues = PaddingValues(16.dp)
-    @Stable val GridColumns = GridCells.Adaptive(150.dp)
+    @Stable val GridColumns = GridCells.Adaptive(160.dp)
     @Stable val ListItemElevation = 3.dp
     @Stable val ListItemTopPadding = 16.dp
     @Stable val ListItemHorizontalPadding = 8.dp

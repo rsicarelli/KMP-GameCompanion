@@ -1,5 +1,6 @@
 package app.dreamlightpal.home
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -12,7 +13,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.DarkMode
 import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.LightMode
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.Icon
@@ -53,7 +56,12 @@ import org.kodein.di.compose.rememberInstance
 import org.kodein.di.compose.withDI
 
 @Composable
-fun HomeScreen(componentContext: ComponentContext, di: DI) = withDI(di) {
+fun HomeScreen(
+    componentContext: ComponentContext,
+    di: DI,
+    isDarkMode: Boolean = isSystemInDarkTheme(),
+    onToggleTheme: () -> Unit,
+) = withDI(di) {
     val listComponentFactory by rememberInstance<ListComponentFactory>()
     val detailComponentFactory by rememberInstance<DetailComponentFactory>()
 
@@ -77,20 +85,45 @@ fun HomeScreen(componentContext: ComponentContext, di: DI) = withDI(di) {
                     Column(
                         Modifier
                             .fillMaxHeight()
-                            .widthIn(min = 80.dp)
-                            .padding(vertical = 4.dp)
-                            .selectableGroup(),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                            .widthIn(min = 80.dp, max = 300.dp)
+                            .padding(vertical = 24.dp),
                     ) {
-                        items.forEachIndexed { index, item ->
-                            NavigationRailItem(
-                                icon = { Icon(icons[index], contentDescription = item) },
-                                label = { Text(item) },
-                                selected = selectedItem == index,
-                                onClick = { selectedItem = index }
-                            )
+                        Column(
+                            modifier = Modifier.selectableGroup().weight(1F),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            items.forEachIndexed { index, item ->
+                                NavigationRailItem(
+                                    icon = {
+                                        Icon(
+                                            imageVector = icons[index],
+                                            contentDescription = item
+                                        )
+                                    },
+                                    label = {
+                                        Text(
+                                            modifier = Modifier.padding(top = 8.dp),
+                                            text = item,
+                                            style = MaterialTheme.typography.labelLarge
+                                        )
+                                    },
+                                    selected = selectedItem == index,
+                                    onClick = { selectedItem = index }
+                                )
+                            }
                         }
+
+                        NavigationRailItem(
+                            icon = {
+                                Icon(
+                                    imageVector = if (isDarkMode) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
+                                    contentDescription = "Toggle dark mode"
+                                )
+                            },
+                            selected = false,
+                            onClick = onToggleTheme
+                        )
                     }
                     ListPane(
                         stack = homeComponent.listStack,

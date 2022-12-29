@@ -55,12 +55,6 @@ class HomeComponentHolder(
 
     }
 
-    private fun switchToMultiPane() {
-    }
-
-    private fun switchToSinglePane() {
-    }
-
     override val listStack: Value<ChildStack<*, HomeComponent.ListFeatureStack>> = listRouter.stack
 
     private val detailRouter = DetailRouter(this, detailComponentFactory, ::onClose)
