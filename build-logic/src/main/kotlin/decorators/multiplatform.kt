@@ -14,7 +14,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 @OptIn(ExperimentalComposeLibrary::class)
 fun Project.setupMultiplatformLibrary(
-    compilerArgs: Sequence<String> = sequenceOf(),
+    enableCompose: Boolean = false,
     commonMainDependencies: KotlinDependencyHandler.() -> Unit = { },
     androidMainDependencies: KotlinDependencyHandler.() -> Unit = { },
     desktopMainDependencies: KotlinDependencyHandler.() -> Unit = { },
@@ -23,27 +23,36 @@ fun Project.setupMultiplatformLibrary(
         pluginManager.apply {
             apply("com.android.library")
             apply("kotlin-multiplatform")
-            apply("org.jetbrains.compose")
+            if (enableCompose) {
+                apply("org.jetbrains.compose")
+            }
         }
         android()
         jvm("desktop")
 
         sourceSets {
             named("commonMain") {
-                dependencies {
-                    compileOnly(compose.dependencies.runtime)
-                    compileOnly(compose.dependencies.foundation)
-                    compileOnly(compose.dependencies.preview)
+                if (enableCompose) {
+                    dependencies {
+                        compileOnly(compose.dependencies.runtime)
+                        compileOnly(compose.dependencies.foundation)
+                        compileOnly(compose.dependencies.preview)
+                        compileOnly(compose.dependencies.material3)
+                    }
                 }
+
                 dependencies(commonMainDependencies)
             }
             named("androidMain") {
                 dependencies(androidMainDependencies)
             }
             named("desktopMain") {
-                dependencies {
-                    compileOnly(compose.dependencies.desktop.common)
+                if(enableCompose) {
+                    dependencies {
+                        compileOnly(compose.dependencies.desktop.common)
+                    }
                 }
+
                 dependencies(desktopMainDependencies)
             }
 

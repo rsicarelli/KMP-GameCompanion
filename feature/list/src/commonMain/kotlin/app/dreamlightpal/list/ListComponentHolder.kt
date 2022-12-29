@@ -41,10 +41,7 @@ internal class ListComponentHolder(
 
     private val _state = MutableStateFlow(ListState(collectionItems = Fake_Collections))
     override val state: StateFlow<ListState> = _state.asStateFlow()
-
-
 }
-
 
 val Fake_Collections = listOf(
     ListState.CollectionListItem(

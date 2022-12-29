@@ -1,6 +1,5 @@
 package app.dreamlightpal.list
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -15,7 +14,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.list.ListComponent.ListState
-import app.dreamlightpal.ui.theme.DreamlightPalTheme
 
 @Composable
 fun ListScreen(
@@ -41,13 +39,5 @@ fun ListScreen(
 
             Divider()
         }
-    }
-}
-
-@Preview
-@Composable
-private fun ListScreenPreview() {
-    DreamlightPalTheme {
-
     }
 }

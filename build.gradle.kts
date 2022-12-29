@@ -13,18 +13,8 @@ buildscript {
     }
 }
 
-plugins {
-    id("app.dreamlightpal.gradle")
-    alias(libs.plugins.arturbosch.detekt)
-}
-
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "11"
     }
-}
-
-detekt {
-    buildUponDefaultConfig = true
-    config = files("$projectDir/build-logic/detekt.yml")
 }

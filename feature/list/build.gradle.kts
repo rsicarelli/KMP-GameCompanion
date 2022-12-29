@@ -9,6 +9,7 @@ plugins {
 }
 
 setupMultiplatformLibrary(
+    enableCompose = true,
     commonMainDependencies = {
         compileOnly(projects.core.designSystem)
         compileOnly(projects.core.collection)
