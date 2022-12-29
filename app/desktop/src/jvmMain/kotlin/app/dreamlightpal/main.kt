@@ -5,11 +5,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.singleWindowApplication
 import app.dreamlightpal.collection.CollectionModule
-import app.dreamlightpal.compose.DreamlightPalScaffold
 import app.dreamlightpal.detail.DetailModule
 import app.dreamlightpal.home.HomeScreen
 import app.dreamlightpal.list.ListModule
 import app.dreamlightpal.threading.ThreadingModule
+import app.dreamlightpal.ui.theme.DreamlightPalTheme
 import com.arkivanov.decompose.DefaultComponentContext
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import org.kodein.di.DI
@@ -23,7 +23,7 @@ fun main() = singleWindowApplication(
     val lifecycle = remember { LifecycleRegistry() }
     val componentContext = remember(lifecycle) { DefaultComponentContext(lifecycle) }
 
-    DreamlightPalScaffold {
+    DreamlightPalTheme {
         HomeScreen(componentContext, di)
     }
 }
