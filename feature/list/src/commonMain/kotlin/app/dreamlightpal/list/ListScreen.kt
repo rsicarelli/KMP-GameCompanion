@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -40,6 +39,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
@@ -118,19 +118,22 @@ private fun ListItem(
     shape = MaterialTheme.shapes.large,
     elevation = CardDefaults.cardElevation(defaultElevation = ListItemElevation)
 ) {
-    Column {
+    Column(
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 24.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
         Image(
             modifier = Modifier.fillMaxWidth()
-                .heightIn(min = 88.dp)
-                .weight(0.68F)
-                .padding(horizontal = 24.dp)
-                .then(Modifier.padding(top = 24.dp)),
+                .weight(0.75F),
             painter = rememberAsyncImagePainter(collectionListItem.imageUrl),
-            contentDescription = null
+            contentDescription = null,
+            contentScale = ContentScale.FillHeight,
         )
 
         Text(
-            modifier = Modifier.padding(horizontal = ListScreenTokens.ListItemHorizontalPadding).weight(0.32F).padding(16.dp).align(Alignment.CenterHorizontally),
+            modifier = Modifier.padding(horizontal = ListScreenTokens.ListItemHorizontalPadding)
+                .weight(0.24F)
+                .align(Alignment.CenterHorizontally),
             text = collectionListItem.localizedNameKey,
             maxLines = 1,
             style = MaterialTheme.typography.titleLarge,
@@ -231,9 +234,8 @@ private object ListScreenTokens {
     const val ListItemAspectRatio = 0.78F
     @Stable val GridArrangement = Arrangement.spacedBy(16.dp)
     @Stable val GridPaddingValues = PaddingValues(16.dp)
-    @Stable val GridColumns = GridCells.Adaptive(180.dp)
+    @Stable val GridColumns = GridCells.Adaptive(150.dp)
     @Stable val ListItemElevation = 3.dp
-    @Stable val ListItemImageSize = 88.dp
     @Stable val ListItemTopPadding = 16.dp
     @Stable val ListItemHorizontalPadding = 8.dp
 }
