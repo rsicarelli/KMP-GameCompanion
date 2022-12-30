@@ -30,6 +30,7 @@ interface HomeComponent {
     val detailStack: Value<ChildStack<*, DetailFeatureStack>>
 
     sealed interface ListFeatureStack {
+        object Hidden : ListFeatureStack
         class List(val component: ListComponent) : ListFeatureStack
     }
 
@@ -45,14 +46,13 @@ class HomeComponentHolder(
     detailComponentFactory: DetailComponentFactory,
 ) : HomeComponent, ComponentContext by componentContext {
 
-    private val listRouter = ListRouter(this, listComponentFactory, ::onItemSelected)
+    private val listRouter = ListRouter(this, listComponentFactory)
 
     private val _models = MutableValue(HomeComponent.Model())
     override val models: Value<HomeComponent.Model> = _models
 
     override fun setMultiPane(isMultiPane: Boolean) {
         _models.reduce { it.copy(isMultiPane = isMultiPane) }
-
     }
 
     override val listStack: Value<ChildStack<*, HomeComponent.ListFeatureStack>> = listRouter.stack
@@ -60,7 +60,10 @@ class HomeComponentHolder(
     private val detailRouter = DetailRouter(this, detailComponentFactory, ::onClose)
     override val detailStack: Value<ChildStack<*, HomeComponent.DetailFeatureStack>> = detailRouter.stack
 
-    fun onItemSelected(id: String) {
+    fun onItemSelected(id: String, isMultiPane: Boolean = false) {
+        if (!isMultiPane) {
+            listRouter.hide()
+        }
         detailRouter.showDetails(id)
     }
 

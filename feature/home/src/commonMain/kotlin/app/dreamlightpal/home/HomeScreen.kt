@@ -1,5 +1,7 @@
 package app.dreamlightpal.home
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -36,6 +38,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.compose.navigationBarPadding
 import app.dreamlightpal.detail.DetailComponentFactory
@@ -71,89 +74,30 @@ fun HomeScreen(
 
     BoxWithConstraints(modifier = Modifier.navigationBarPadding()) {
         val isMultiPaneRequired by remember { derivedStateOf { maxWidth >= MultiPaneWidthThreshold } }
-        var selectedItem by remember { mutableStateOf(0) }
-        val items = listOf("Home", "Search", "Settings")
-        val icons = listOf(Icons.Rounded.Home, Icons.Rounded.Search, Icons.Rounded.Settings)
+
+        val onItemClick: (String) -> Unit = remember(homeComponent) {
+            { id -> homeComponent.onItemSelected(id, isMultiPaneRequired) }
+        }
 
         Surface(
             color = NavigationBarDefaults.containerColor,
             contentColor = MaterialTheme.colorScheme.contentColorFor(NavigationBarDefaults.containerColor),
             tonalElevation = NavigationBarDefaults.Elevation,
         ) {
+            val items = remember { listOf("Home", "Search", "Settings") }
+            val icons = remember { listOf(Icons.Rounded.Home, Icons.Rounded.Search, Icons.Rounded.Settings) }
+
             if (isMultiPaneRequired) {
-                Row {
-                    Column(
-                        Modifier
-                            .fillMaxHeight()
-                            .widthIn(min = 80.dp, max = 300.dp)
-                            .padding(vertical = 24.dp),
-                    ) {
-                        Column(
-                            modifier = Modifier.selectableGroup().weight(1F),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(4.dp)
-                        ) {
-                            items.forEachIndexed { index, item ->
-                                NavigationRailItem(
-                                    icon = {
-                                        Icon(
-                                            imageVector = icons[index],
-                                            contentDescription = item
-                                        )
-                                    },
-                                    label = {
-                                        Text(
-                                            modifier = Modifier.padding(top = 8.dp),
-                                            text = item,
-                                            style = MaterialTheme.typography.labelLarge
-                                        )
-                                    },
-                                    selected = selectedItem == index,
-                                    onClick = { selectedItem = index }
-                                )
-                            }
-                        }
-
-                        NavigationRailItem(
-                            icon = {
-                                Icon(
-                                    imageVector = if (isDarkMode) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
-                                    contentDescription = "Toggle dark mode"
-                                )
-                            },
-                            selected = false,
-                            onClick = onToggleTheme
-                        )
-                    }
-                    ListPane(
-                        stack = homeComponent.listStack,
-                        modifier = Modifier.weight(FullScreenWeight),
-                    )
-
-                }
+                SplitScreen(
+                    items = items,
+                    icons = icons,
+                    isDarkMode = isDarkMode,
+                    onToggleTheme = onToggleTheme,
+                    homeComponent = homeComponent,
+                    onItemClick = onItemClick
+                )
             } else {
-                Column {
-                    ListPane(
-                        stack = homeComponent.listStack,
-                        modifier = Modifier.weight(FullScreenWeight),
-                    )
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(80.dp)
-                            .selectableGroup(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        items.forEachIndexed { index, item ->
-                            NavigationBarItem(
-                                icon = { Icon(icons[index], contentDescription = item) },
-                                label = { Text(item) },
-                                selected = selectedItem == index,
-                                onClick = { selectedItem = index }
-                            )
-                        }
-                    }
-                }
+                FullScreen(homeComponent, onItemClick, items, icons)
             }
         }
 
@@ -164,30 +108,169 @@ fun HomeScreen(
     }
 }
 
+@Composable
+private fun FullScreen(
+    homeComponent: HomeComponentHolder,
+    onItemClick: (String) -> Unit,
+    items: List<String>,
+    icons: List<ImageVector>,
+) {
+    var selectedItem by remember { mutableStateOf(0) }
+    val _onItemClick: (String) -> Unit = remember {
+        {
+            onItemClick(it)
+        }
+    }
+
+    Column {
+        ListPane(
+            stack = homeComponent.listStack,
+            modifier = Modifier.weight(FullScreenWeight),
+            onItemClick = _onItemClick
+        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp)
+                .selectableGroup(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            items.forEachIndexed { index, item ->
+                NavigationBarItem(
+                    icon = { Icon(icons[index], contentDescription = item) },
+                    label = { Text(item) },
+                    selected = selectedItem == index,
+                    onClick = { selectedItem = index }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SplitScreen(
+    items: List<String>,
+    icons: List<ImageVector>,
+    isDarkMode: Boolean,
+    onToggleTheme: () -> Unit,
+    homeComponent: HomeComponentHolder,
+    onItemClick: (String) -> Unit,
+) {
+    val selectedItem by remember { mutableStateOf(0) }
+    var isSplitActive by remember { mutableStateOf(false) }
+
+    Row {
+        NavigationRail(
+            items = items,
+            icons = icons,
+            selectedItem = selectedItem,
+            isDarkMode = isDarkMode,
+            onToggleTheme = onToggleTheme
+        )
+
+        val _onItemClick: (String) -> Unit = remember {
+            {
+                onItemClick(it)
+                isSplitActive = !isSplitActive
+            }
+        }
+
+        ListPane(
+            modifier = Modifier.weight(FullScreenWeight).animateContentSize(),
+            stack = homeComponent.listStack,
+            onItemClick = _onItemClick
+        )
+
+        AnimatedVisibility(visible = isSplitActive) {
+            DetailsPane(
+                modifier = Modifier,
+                stack = homeComponent.detailStack,
+                isSplitScreen = true
+            )
+        }
+    }
+}
+
+@Composable
+private fun NavigationRail(
+    items: List<String>,
+    icons: List<ImageVector>,
+    selectedItem: Int,
+    isDarkMode: Boolean,
+    onToggleTheme: () -> Unit,
+) {
+    var selectedItem1 = selectedItem
+    Column(
+        Modifier
+            .fillMaxHeight()
+            .widthIn(min = 80.dp, max = 300.dp)
+            .padding(vertical = 24.dp),
+    ) {
+        Column(
+            modifier = Modifier.selectableGroup().weight(1F),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            items.forEachIndexed { index, item ->
+                NavigationRailItem(
+                    icon = {
+                        Icon(
+                            imageVector = icons[index],
+                            contentDescription = item
+                        )
+                    },
+                    label = {
+                        Text(
+                            modifier = Modifier.padding(top = 8.dp),
+                            text = item,
+                            style = MaterialTheme.typography.labelLarge
+                        )
+                    },
+                    selected = selectedItem1 == index,
+                    onClick = { selectedItem1 = index }
+                )
+            }
+        }
+
+        NavigationRailItem(
+            icon = {
+                Icon(
+                    imageVector = if (isDarkMode) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
+                    contentDescription = "Toggle dark mode"
+                )
+            },
+            selected = false,
+            onClick = onToggleTheme
+        )
+    }
+}
+
 @OptIn(ExperimentalDecomposeApi::class)
 @Composable
-private fun ListPane(stack: Value<ChildStack<*, HomeComponent.ListFeatureStack>>, modifier: Modifier) {
+private fun ListPane(stack: Value<ChildStack<*, HomeComponent.ListFeatureStack>>, modifier: Modifier, onItemClick: (String) -> Unit) {
     Children(
         stack = stack,
         modifier = modifier,
         animation = stackAnimation(fade()),
     ) {
-        when (val child = it.instance) {
-            is HomeComponent.ListFeatureStack.List -> ListScreen(listComponent = child.component)
+        val isVisible by remember(it.instance) { derivedStateOf { it.instance is HomeComponent.ListFeatureStack.List } }
+
+        AnimatedVisibility(isVisible) {
+            ListScreen(listComponent = (it.instance as HomeComponent.ListFeatureStack.List).component, onItemClick = onItemClick)
         }
     }
 }
 
 @OptIn(ExperimentalDecomposeApi::class)
 @Composable
-private fun DetailsPane(stack: Value<ChildStack<*, HomeComponent.DetailFeatureStack>>, modifier: Modifier) {
+private fun DetailsPane(stack: Value<ChildStack<*, HomeComponent.DetailFeatureStack>>, modifier: Modifier, isSplitScreen: Boolean = false) {
     Children(
         stack = stack,
         modifier = modifier,
         animation = stackAnimation(fade()),
     ) {
         when (val child = it.instance) {
-            is HomeComponent.DetailFeatureStack.Details -> DetailScreen(child.component)
+            is HomeComponent.DetailFeatureStack.Details -> DetailScreen(detailComponent = child.component, isSplitScreen = isSplitScreen)
             HomeComponent.DetailFeatureStack.Hidden -> Box {}
         }
     }

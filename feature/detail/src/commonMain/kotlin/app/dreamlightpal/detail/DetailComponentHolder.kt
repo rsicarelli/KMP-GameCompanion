@@ -3,24 +3,35 @@ package app.dreamlightpal.detail
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.value.Value
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 @Stable
 sealed interface DetailComponent {
 
-    val models: Value<Model>
+    val state: StateFlow<State>
 
     @Immutable
-    data class Model(
-        val isMemes: Boolean,
-    )
+    data class State(
+        val item: CollectionListItem? = null,
+    ) {
+
+        @Immutable
+        data class CollectionListItem(
+            val localizedNameKey: String,
+            val imageUrl: String,
+        )
+    }
 }
 
 internal class DetailComponentHolder(
     componentContext: ComponentContext,
-    onClosed: OnClose,
+    private val onClosed: OnClose,
 ) : DetailComponent, ComponentContext by componentContext {
 
-    override val models: Value<DetailComponent.Model>
-        get() = TODO("Not yet implemented")
+    private val _state = MutableStateFlow(DetailComponent.State())
+    override val state: StateFlow<DetailComponent.State> = _state.asStateFlow()
+
+    fun onClose() = onClosed
 }

@@ -1,6 +1,7 @@
 package app.dreamlightpal.list
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -45,6 +46,7 @@ import app.dreamlightpal.list.ListScreenTokens.ListItemElevation
 fun ListScreen(
     modifier: Modifier = Modifier,
     listComponent: ListComponent,
+    onItemClick: (String) -> Unit,
 ) {
     val listState: ListState by listComponent.state.collectAsState()
 
@@ -54,6 +56,7 @@ fun ListScreen(
         LazyCollectionList(
             modifier = Modifier.fillMaxSize(),
             itemList = listState.collectionItems,
+            onItemClick = onItemClick
         )
 
         FloatingActionButton(
@@ -75,7 +78,8 @@ fun ListScreen(
 @Composable
 private fun LazyCollectionList(
     modifier: Modifier = Modifier,
-    itemList: List<ListState.CollectionListItem>,
+    itemList: List<ListState.Item>,
+    onItemClick: (String) -> Unit,
 ) {
     LazyVerticalGrid(
         modifier = modifier,
@@ -86,10 +90,13 @@ private fun LazyCollectionList(
     ) {
         items(
             items = itemList,
-            key = ListState.CollectionListItem::localizedNameKey
+            key = ListState.Item::hashCode
         ) { listItem ->
             BoxWithConstraints {
-                ListItem(collectionListItem = listItem)
+                ListItem(
+                    modifier = Modifier.clickable { onItemClick(listItem.name) },
+                    item = listItem
+                )
             }
         }
     }
@@ -98,20 +105,20 @@ private fun LazyCollectionList(
 @Composable
 private fun ListItem(
     modifier: Modifier = Modifier,
-    collectionListItem: ListState.CollectionListItem,
+    item: ListState.Item,
 ) = Card(
     modifier = modifier.fillMaxWidth().aspectRatio(1F),
     shape = RoundedCornerShape(28.dp),
     elevation = CardDefaults.cardElevation(defaultElevation = ListItemElevation)
 ) {
     Column(
-        modifier = Modifier.padding(horizontal = 16.dp, vertical = 24.dp),
+        modifier = Modifier.padding(horizontal = 16.dp).then(Modifier.padding(top = 24.dp, bottom = 8.dp)),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Image(
             modifier = Modifier.fillMaxWidth()
                 .weight(0.72F),
-            painter = rememberAsyncImagePainter(collectionListItem.imageUrl),
+            painter = rememberAsyncImagePainter(item.imageUrl),
             contentDescription = null,
             contentScale = ContentScale.FillHeight,
         )
@@ -120,9 +127,9 @@ private fun ListItem(
             modifier = Modifier.padding(horizontal = ListScreenTokens.ListItemHorizontalPadding)
                 .weight(0.27F)
                 .align(Alignment.CenterHorizontally),
-            text = collectionListItem.localizedNameKey,
+            text = item.name,
             maxLines = 1,
-            style = MaterialTheme.typography.titleLarge,
+            style = MaterialTheme.typography.titleMedium,
             overflow = TextOverflow.Ellipsis,
         )
     }
@@ -133,7 +140,7 @@ private object ListScreenTokens {
     const val ListItemAspectRatio = 0.78F
     @Stable val GridArrangement = Arrangement.spacedBy(16.dp)
     @Stable val GridPaddingValues = PaddingValues(16.dp)
-    @Stable val GridColumns = GridCells.Adaptive(160.dp)
+    @Stable val GridColumns = GridCells.Adaptive(150.dp)
     @Stable val ListItemElevation = 3.dp
     @Stable val ListItemTopPadding = 16.dp
     @Stable val ListItemHorizontalPadding = 8.dp
