@@ -32,6 +32,14 @@ data class Meal(
     @SerialName("ingredients") val ingredients: String,
 ) : CollectionItem
 
+@Serializable
+enum class MealCategory {
+
+    @SerialName("Appetizers") Appetizers,
+    @SerialName("Entrées") Entrées,
+    @SerialName("Desserts") Desserts,
+}
+
 interface MealRepository {
 
     val collection: SharedFlow<List<Meal>?>
@@ -75,10 +83,4 @@ internal class MealRepositoryImpl(
             _collection.value = result
         }
     }
-}
-
-@Serializable
-enum class MealCategory {
-
-    Appetizers, Entrées, Desserts,
 }

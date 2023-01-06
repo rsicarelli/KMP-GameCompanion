@@ -2,6 +2,8 @@ package app.dreamlightpal.home
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -12,16 +14,20 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.DarkMode
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.LightMode
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBarDefaults
@@ -43,9 +49,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.collection.domain.model.MealRepository
 import app.dreamlightpal.compose.navigationBarPadding
+import app.dreamlightpal.compose.rememberAsyncImagePainter
 import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.DetailScreen
 import app.dreamlightpal.home.HomeScreenDefaults.FullScreenWeight
@@ -72,11 +81,19 @@ fun HomeScreen(
 ) = withDI(di) {
     val listComponentFactory by rememberInstance<ListComponentFactory>()
     val detailComponentFactory by rememberInstance<DetailComponentFactory>()
-    val mealRepository by rememberInstance<MealRepository>()
     val homeComponent = remember(componentContext, listComponentFactory, detailComponentFactory) {
         HomeComponentHolder(componentContext, listComponentFactory, detailComponentFactory)
     }
 
+    /*Content(
+        homeComponent = homeComponent,
+        isDarkMode = isDarkMode,
+        onToggleTheme = onToggleTheme
+    )*/
+}
+
+@Composable
+private fun Meals(mealRepository: MealRepository) {
     val meals by mealRepository.collection.collectAsState(emptyList())
 
     LaunchedEffect(Unit) {
@@ -86,17 +103,39 @@ fun HomeScreen(
         Box {
             LazyColumn {
                 items(items = it) { listItem ->
-                    Text(listItem.name)
+                    val interactionSource = remember { MutableInteractionSource() }
+
+                    ElevatedCard(
+                        modifier = Modifier.size(200.dp).padding(16.dp),
+                        shape = RoundedCornerShape(28.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.primaryContainer
+                        ),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(horizontal = 16.dp).then(Modifier.padding(top = 24.dp, bottom = 8.dp)),
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            Image(
+                                painter = rememberAsyncImagePainter(listItem.imageUrl),
+                                contentDescription = null,
+                                contentScale = ContentScale.FillHeight,
+                            )
+
+                            Text(
+                                modifier = Modifier.padding(horizontal = 16.dp)
+                                    .align(Alignment.CenterHorizontally),
+                                text = listItem.name,
+                                maxLines = 1,
+                                style = MaterialTheme.typography.titleMedium,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                    }
                 }
             }
         }
     }
-
-    /*Content(
-        homeComponent = homeComponent,
-        isDarkMode = isDarkMode,
-        onToggleTheme = onToggleTheme
-    )*/
 }
 
 @Composable
