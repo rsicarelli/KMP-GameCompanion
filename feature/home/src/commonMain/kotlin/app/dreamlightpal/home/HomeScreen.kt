@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.DarkMode
@@ -30,7 +32,9 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -40,6 +44,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import app.dreamlightpal.collection.domain.model.MealRepository
 import app.dreamlightpal.compose.navigationBarPadding
 import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.DetailScreen
@@ -67,11 +72,39 @@ fun HomeScreen(
 ) = withDI(di) {
     val listComponentFactory by rememberInstance<ListComponentFactory>()
     val detailComponentFactory by rememberInstance<DetailComponentFactory>()
-
+    val mealRepository by rememberInstance<MealRepository>()
     val homeComponent = remember(componentContext, listComponentFactory, detailComponentFactory) {
         HomeComponentHolder(componentContext, listComponentFactory, detailComponentFactory)
     }
 
+    val meals by mealRepository.collection.collectAsState(emptyList())
+
+    LaunchedEffect(Unit) {
+        mealRepository.load()
+    }
+    meals?.let {
+        Box {
+            LazyColumn {
+                items(items = it) { listItem ->
+                    Text(listItem.name)
+                }
+            }
+        }
+    }
+
+    /*Content(
+        homeComponent = homeComponent,
+        isDarkMode = isDarkMode,
+        onToggleTheme = onToggleTheme
+    )*/
+}
+
+@Composable
+private fun Content(
+    homeComponent: HomeComponentHolder,
+    isDarkMode: Boolean,
+    onToggleTheme: () -> Unit,
+) {
     BoxWithConstraints(modifier = Modifier.navigationBarPadding()) {
         val isMultiPaneRequired by remember { derivedStateOf { maxWidth >= MultiPaneWidthThreshold } }
 

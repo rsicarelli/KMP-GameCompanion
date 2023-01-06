@@ -12,11 +12,11 @@ data class Crafting(
     @SerialName("name") override val name: String,
     @SerialName("description") override val description: String?,
     @SerialName("imageUrl") override val imageUrl: String,
-    @SerialName("types") override val types: Sequence<CollectionType>,
-    @SerialName("buyPrice") val buyPrice: String,
-    @SerialName("sellPrice") val sellPrice: String,
-    @SerialName("soldAt") val soldAt: String,
-    @SerialName("craftingRecipe") val craftingRecipe: String,
+    @SerialName("types") override val types: List<CollectionType>,
+    @SerialName("buyPrice") val buyPrice: String?,
+    @SerialName("sellPrice") val sellPrice: String?,
+    @SerialName("soldAt") @Contextual val soldAt: LocationId?,
+    @SerialName("craftingRecipe") val craftingRecipe: String?,
 ) : CollectionItem
 
 sealed interface CraftingRepository {

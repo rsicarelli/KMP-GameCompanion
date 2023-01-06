@@ -14,6 +14,8 @@ setupMultiplatformLibrary(
         implementation(libs.squareup.sqldelight.runtime)
         implementation(libs.squareup.sqldelight.extension.coroutines)
         implementation(libs.jetbrains.kotlinx.serialization.json)
+        implementation(libs.jetbrains.kotlinx.serialization.json.okio)
+        implementation(libs.squareup.okio)
 
         compileOnly(libs.kodein.di)
 

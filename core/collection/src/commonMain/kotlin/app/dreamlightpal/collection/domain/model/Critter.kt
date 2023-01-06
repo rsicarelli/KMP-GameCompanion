@@ -11,7 +11,7 @@ data class Critter(
     @SerialName("name") override val name: String,
     @SerialName("description") override val description: String?,
     @SerialName("imageUrl") override val imageUrl: String,
-    @SerialName("types") override val types: Sequence<CollectionType>,
+    @SerialName("types") override val types: List<CollectionType>,
     @SerialName("preferredGifts") val preferredGifts: Sequence<CollectionItemId>,
     @SerialName("preferredMealLevel") val preferredMealLevel: Int,
     @SerialName("locationId") @Contextual val locationId: LocationId,

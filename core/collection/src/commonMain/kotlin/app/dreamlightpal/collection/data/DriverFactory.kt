@@ -1,7 +1,7 @@
 package app.dreamlightpal.collection.data
 
 import app.dreamlightpal.DreamlightPal
-import app.dreamlightpal.collection.domain.model.CollectionItem
+import app.dreamlightpal.collection.domain.model.CollectionType
 import appdreamlightpal.Collection_item
 import com.squareup.sqldelight.ColumnAdapter
 import com.squareup.sqldelight.db.SqlDriver
@@ -24,6 +24,7 @@ class DreamlightPalDatabaseFactory(
     }
 }
 
+
 expect class DriverFactory {
 
     fun createDriver(): SqlDriver
@@ -37,11 +38,11 @@ private val listOfStringsAdapter = object : ColumnAdapter<List<String>, String> 
     override fun encode(value: List<String>) = value.joinToString(separator = ",")
 }
 
-private val listOfTypesAdapter = object : ColumnAdapter<List<CollectionItem.Type>, String> {
-    override fun decode(databaseValue: String): List<CollectionItem.Type> =
+private val listOfTypesAdapter = object : ColumnAdapter<List<CollectionType>, String> {
+    override fun decode(databaseValue: String): List<CollectionType> =
         if (databaseValue.isEmpty()) listOf()
         else databaseValue.split(",")
-            .map(CollectionItem.Type::fromString)
+            .map(CollectionType.Companion::fromString)
 
-    override fun encode(value: List<CollectionItem.Type>): String = value.joinToString(separator = ",")
+    override fun encode(value: List<CollectionType>): String = value.joinToString(separator = ",")
 }

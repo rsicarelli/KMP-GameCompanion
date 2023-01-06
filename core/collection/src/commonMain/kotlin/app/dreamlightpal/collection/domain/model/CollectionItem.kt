@@ -3,7 +3,7 @@ package app.dreamlightpal.collection.domain.model
 import java.net.URLEncoder
 import kotlinx.serialization.Serializable
 
-@JvmInline
+@JvmInline @Serializable
 value class CollectionItemId(val value: String)
 
 sealed interface CollectionItem {
@@ -12,7 +12,7 @@ sealed interface CollectionItem {
     val name: String
     val description: String?
     val imageUrl: String
-    val types: Sequence<CollectionType>
+    val types: List<CollectionType>
 }
 
 val CollectionItem.wikiUrl: String

@@ -12,7 +12,7 @@ data class Memory(
     @SerialName("name") override val name: String,
     @SerialName("description") override val description: String?,
     @SerialName("imageUrl") override val imageUrl: String,
-    @SerialName("types") override val types: Sequence<CollectionType>,
+    @SerialName("types") override val types: List<CollectionType>,
     @SerialName("entry") val entry: String,
     @SerialName("location") val location: String,
     @SerialName("details") val details: String,

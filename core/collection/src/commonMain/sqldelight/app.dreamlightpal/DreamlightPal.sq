@@ -1,4 +1,4 @@
-import app.dreamlightpal.collection.domain.CollectionItem;
+import app.dreamlightpal.collection.domain.model.CollectionType;
 import kotlin.collections.List;
 
 CREATE TABLE collection_item(
@@ -9,7 +9,7 @@ CREATE TABLE collection_item(
     localizedDescriptionKey TEXT NOT NULL,
     imageUrl TEXT NOT NULL,
     locationIds TEXT AS List<String> NOT NULL,
-    types TEXT AS List<CollectionItem.Type> NOT NULL,
+    types TEXT AS List<CollectionType> NOT NULL,
     externalTypeRefId TEXT AS List<String> NOT NULL,
     activityIds TEXT AS List<String> NOT NULL,
     collectionRecipeIds TEXT AS List<String> NOT NULL,
