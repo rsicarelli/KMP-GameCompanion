@@ -28,12 +28,35 @@ data class Clothing(
     @SerialName("imageUrl") override val imageUrl: String,
     @SerialName("types") override val types: List<CollectionType>,
     @SerialName("category") val category: String,
-    @SerialName("tags") val tags: Sequence<String>,
+    @SerialName("tags") val tags: List<String>,
     @SerialName("from") val from: String,
-    @SerialName("buyPrice") val buyPrice: String,
-    @SerialName("rewardFrom") val rewardFrom: String,
+    @SerialName("buyPrice") val buyPrice: Int?,
+    @SerialName("rewardFrom") val rewardFrom: String?,
     @SerialName("realm") val realm: String,
 ) : CollectionItem
+
+@Serializable
+enum class ClothingCategory {
+
+    @SerialName("Shorts") Shorts,
+    @SerialName("Hat") Hat,
+    @SerialName("Bracelet") Bracelet,
+    @SerialName("Top") Top,
+    @SerialName("Glasses") Glasses,
+    @SerialName("Back") Back,
+    @SerialName("Coat") Coat,
+    @SerialName("Costume") Costume,
+    @SerialName("Dress") Dress,
+    @SerialName("Shoes") Shoes,
+    @SerialName("Earrings") Earrings,
+    @SerialName("Pants") Pants,
+    @SerialName("Hairstyle") Hairstyle,
+    @SerialName("Gloves") Gloves,
+    @SerialName("Neckwear") Neckwear,
+    @SerialName("Skirt") Skirt,
+    @SerialName("Hose Socks") HoseSocks,
+    @SerialName("Masks") Masks
+}
 
 sealed interface ClothingRepository {
 
