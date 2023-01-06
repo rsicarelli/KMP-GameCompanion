@@ -1,5 +1,6 @@
-package app.dreamlightpal.collection.domain
+package app.dreamlightpal.collection.domain.repository
 
+import app.dreamlightpal.collection.domain.model.CollectionItem
 import kotlinx.coroutines.flow.SharedFlow
 
 interface CollectionRepository {

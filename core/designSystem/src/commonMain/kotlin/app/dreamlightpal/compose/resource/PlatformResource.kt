@@ -1,5 +1,8 @@
 package app.dreamlightpal.compose.resource
 
+import androidx.compose.runtime.Stable
+
+@Stable
 interface PlatformResource {
 
     val resId: Int?

@@ -1,7 +1,7 @@
 package app.dreamlightpal.collection
 
 import app.dreamlightpal.collection.data.CollectionRepositoryImpl
-import app.dreamlightpal.collection.domain.CollectionRepository
+import app.dreamlightpal.collection.domain.repository.CollectionRepository
 import app.dreamlightpal.collection.domain.SyncCollectionUseCase
 import org.kodein.di.DI
 import org.kodein.di.bind
