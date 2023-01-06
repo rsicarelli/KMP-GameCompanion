@@ -27,8 +27,8 @@ data class Crafting(
     @SerialName("description") override val description: String?,
     @SerialName("imageUrl") override val imageUrl: String,
     @SerialName("types") override val types: List<CollectionType>,
-    @SerialName("buyPrice") val buyPrice: String?,
-    @SerialName("sellPrice") val sellPrice: String?,
+    @SerialName("buyPrice") val buyPrice: Int?,
+    @SerialName("sellPrice") val sellPrice: Int?,
     @SerialName("soldAt") @Contextual val soldAt: LocationId?,
     @SerialName("craftingRecipe") val craftingRecipe: String?,
 ) : CollectionItem

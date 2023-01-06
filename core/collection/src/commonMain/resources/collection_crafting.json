@@ -1,0 +1,1802 @@
+[
+  {
+    "itemID": "Brick",
+    "name": "Brick",
+    "description": "A classic red brick. Perfect for construction.",
+    "buyPrice": 130,
+    "sellPrice": 130,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Clay (5) Coal Ore",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/58/Brick.png"
+  },
+  {
+    "itemID": "Empty Vial",
+    "name": "Empty Vial",
+    "description": "This empty vial is waiting to be filled.",
+    "buyPrice": 1,
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Glass (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/74/Empty_Vial.png"
+  },
+  {
+    "itemID": "Fabric",
+    "name": "Fabric",
+    "description": "What will you cut out of this fabric?",
+    "buyPrice": 220,
+    "sellPrice": 220,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Cotton (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/2b/Fabric.png"
+  },
+  {
+    "itemID": "Fiber",
+    "name": "Fiber",
+    "description": "Sturdy, rustic fiber used in many recipes.",
+    "buyPrice": 6,
+    "sellPrice": 6,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Seaweed",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/45/Fiber.png"
+  },
+  {
+    "itemID": "Glass",
+    "name": "Glass",
+    "description": "This glass is good for making something fun.",
+    "buyPrice": 50,
+    "sellPrice": 50,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Sand (5) Coal Ore",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/15/Glass.png"
+  },
+  {
+    "itemID": "Gold Ingot",
+    "name": "Gold Ingot",
+    "description": "Not gold coins, but still fun to jump into.",
+    "buyPrice": 130,
+    "sellPrice": 130,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Gold Nugget (5) Coal Ore",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/22/Gold_Ingot.png"
+  },
+  {
+    "itemID": "Iron Ingot",
+    "name": "Iron Ingot",
+    "description": "An iron ingot waiting to become something more.",
+    "buyPrice": 70,
+    "sellPrice": 70,
+    "soldAt": "Kristoff's Stall",
+    "craftingRecipe": "Iron Ore (5) Coal Ore",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/0a/Iron_Ingot.png"
+  },
+  {
+    "itemID": "Night Shard",
+    "name": "Night Shard",
+    "description": "The opposite of a Dream Shard. Be careful.",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Onyx",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/ef/Night_Shard.png"
+  },
+  {
+    "itemID": "Rope",
+    "name": "Rope",
+    "description": "A strong rope, good for holding things together.",
+    "buyPrice": 60,
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Fiber (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b4/Rope.png"
+  },
+  {
+    "itemID": "Seaweed",
+    "name": "Seaweed",
+    "description": "A type of algae found in the ocean. If you go fishing somewhere calm, away from ripples, you should be able to catch a lot of it!",
+    "buyPrice": 20,
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Red Algae",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/13/Seaweed.png"
+  },
+  {
+    "itemID": "Soil",
+    "name": "Soil",
+    "description": "A clump of soil that's perfect for gardening.",
+    "buyPrice": 3,
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rich Soil",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/42/Soil.png"
+  },
+  {
+    "itemID": "Tinkering Parts",
+    "name": "Tinkering Parts",
+    "description": "Various bits and pieces that are useful when it comes to crafting.",
+    "buyPrice": 170,
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ore (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fe/Tinkering_Parts.png"
+  },
+  {
+    "itemID": "Dreamlight (250)",
+    "name": "Dreamlight (250)",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dream Shard (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/eb/Dreamlight.png"
+  },
+  {
+    "itemID": "Even More Miraculous Fishing Bait",
+    "name": "Even More Miraculous Fishing Bait",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (25) Red Algae (12) Dreamlight (2500)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/bf/Even_More_Miraculous_Fishing_Bait.png"
+  },
+  {
+    "itemID": "Even More Miraculous Growth Elixir",
+    "name": "Even More Miraculous Growth Elixir",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (25) Rich Soil (25) Dreamlight (2500)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/90/Even_More_Miraculous_Growth_Elixir.png"
+  },
+  {
+    "itemID": "Even More Miraculous Pickaxe Polish",
+    "name": "Even More Miraculous Pickaxe Polish",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (25) Onyx (12) Dreamlight (2500)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/37/Even_More_Miraculous_Pickaxe_Polish.png"
+  },
+  {
+    "itemID": "Even More Miraculous Shovel Varnish",
+    "name": "Even More Miraculous Shovel Varnish",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (25) Dry Wood (25) Dreamlight (2500)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1f/Even_More_Miraculous_Shovel_Varnish.png"
+  },
+  {
+    "itemID": "Miracle Fishing Bait",
+    "name": "Miracle Fishing Bait",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (10) Red Algae (5) Dreamlight (1000)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/7a/Miracle_Fishing_Bait.png"
+  },
+  {
+    "itemID": "Miracle Growth Elixir",
+    "name": "Miracle Growth Elixir",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (10) Rich Soil (10) Dreamlight (1000)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/28/Miracle_Growth_Elixir.png"
+  },
+  {
+    "itemID": "Miracle Pickaxe Polish",
+    "name": "Miracle Pickaxe Polish",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (10) Onyx (5) Dreamlight (1000)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/22/Miracle_Pickaxe_Polish.png"
+  },
+  {
+    "itemID": "Miracle Shovel Varnish",
+    "name": "Miracle Shovel Varnish",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Vitalys Crystal (10) Dry Wood (10) Dreamlight (1000)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/6f/Miracle_Shovel_Varnish.png"
+  },
+  {
+    "itemID": "Purified Night Shard",
+    "name": "Purified Night Shard",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Night Shard (5) Dream Shard",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e5/Purified_Night_Shard.png"
+  },
+  {
+    "itemID": "Black Flat-Top Stove",
+    "name": "Black Flat-Top Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Glass (3) Black Passion Lily (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/10/Black_Flat-Top_Stove.png"
+  },
+  {
+    "itemID": "Black Gas Stove",
+    "name": "Black Gas Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (12) Glass (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/a6/Black_Gas_Stove.png"
+  },
+  {
+    "itemID": "Black Retro Portable Radio",
+    "name": "Black Retro Portable Radio",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Iron Ingot (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/6e/Black_Retro_Portable_Radio.png"
+  },
+  {
+    "itemID": "Brown Retro Portable Radio",
+    "name": "Brown Retro Portable Radio",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (10) Iron Ingot (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/d7/Brown_Retro_Portable_Radio.png"
+  },
+  {
+    "itemID": "Chest",
+    "name": "Chest",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (25) Stone (25)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b3/Chest.png"
+  },
+  {
+    "itemID": "Gray Flat-Top Stove",
+    "name": "Gray Flat-Top Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Glass (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1b/Gray_Flat-Top_Stove.png"
+  },
+  {
+    "itemID": "Gray Gas Stove",
+    "name": "Gray Gas Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (12) Glass (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1c/Gray_Gas_Stove.png"
+  },
+  {
+    "itemID": "Gray Mailbox",
+    "name": "Gray Mailbox",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (2) Hardwood (10) White Bell Flower (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/65/Gray_Mailbox.png"
+  },
+  {
+    "itemID": "Iron Crafting Station",
+    "name": "Iron Crafting Station",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Hardwood (10) Topaz (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/a0/Iron_Crafting_Station.png"
+  },
+  {
+    "itemID": "Pale Gray Flat-Top Stove",
+    "name": "Pale Gray Flat-Top Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Glass (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1e/Pale_Gray_Flat-Top_Stove.png"
+  },
+  {
+    "itemID": "Pale Gray Gas Stove",
+    "name": "Pale Gray Gas Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (12) Glass (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b3/Pale_Gray_Gas_Stove.png"
+  },
+  {
+    "itemID": "Pink Flat-Top Stove",
+    "name": "Pink Flat-Top Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Glass (3) Pink Houseleek (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/cf/Pink_Flat-Top_Stove.png"
+  },
+  {
+    "itemID": "Pink Gas Stove",
+    "name": "Pink Gas Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (12) Glass (2) Pink Houseleek (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1b/Pink_Gas_Stove.png"
+  },
+  {
+    "itemID": "Red Mailbox",
+    "name": "Red Mailbox",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (2) Hardwood (10) Red Bromeliad (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f5/Red_Mailbox.png"
+  },
+  {
+    "itemID": "White Flat-Top Stove",
+    "name": "White Flat-Top Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Glass (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/04/White_Flat-Top_Stove.png"
+  },
+  {
+    "itemID": "White Gas Stove",
+    "name": "White Gas Stove",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (12) Glass (2) Black Passion Lily (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f4/White_Gas_Stove.png"
+  },
+  {
+    "itemID": "Wooden Crafting Station",
+    "name": "Wooden Crafting Station",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Hardwood (10) Topaz (1) Red Falling Penstemon (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/dd/Wooden_Crafting_Station.png"
+  },
+  {
+    "itemID": "Autumn Harvest Pennants",
+    "name": "Autumn Harvest Pennants",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (10) Fabric (5) Corn (10) Pumpkin (4)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/ee/Autumn_Harvest_Pennants.png"
+  },
+  {
+    "itemID": "Autumn Wreath",
+    "name": "Autumn Wreath",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Sunflower (2) Rope Soil (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b9/Autumn_Wreath.png"
+  },
+  {
+    "itemID": "Barrel Part",
+    "name": "Barrel Part",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/91/Barrel_Part.png"
+  },
+  {
+    "itemID": "Basket",
+    "name": "Basket",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Fiber (6) Pink Hydrangea",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e4/Basket.png"
+  },
+  {
+    "itemID": "Bench",
+    "name": "Bench",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f7/Bench.png"
+  },
+  {
+    "itemID": "Black Wrought Iron Streetlamp",
+    "name": "Black Wrought Iron Streetlamp",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Glass (2) Topaz",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3f/Black_Wrought_Iron_Streetlamp.png"
+  },
+  {
+    "itemID": "Blue and Silver Balloon Arch",
+    "name": "Blue and Silver Balloon Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Blue Falling Penstemon (20) Blue Star Lily (20) Blue Marsh Milkweed (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/27/Blue_and_Silver_Balloon_Arch.png"
+  },
+  {
+    "itemID": "Blue and Silver Balloon Cluster",
+    "name": "Blue and Silver Balloon Cluster",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Blue Falling Penstemon (8) Blue Star Lily (8) Blue Marsh Milkweed (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/ac/Blue_and_Silver_Balloon_Cluster.png"
+  },
+  {
+    "itemID": "Blue Light High Beach Torch",
+    "name": "Blue Light High Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Aquamarine",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/83/Blue_Light_High_Beach_Torch.png"
+  },
+  {
+    "itemID": "Blue Light Low Beach Torch",
+    "name": "Blue Light Low Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Aquamarine",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/8f/Blue_Light_Low_Beach_Torch.png"
+  },
+  {
+    "itemID": "Blue Wrought Iron Streetlamp",
+    "name": "Blue Wrought Iron Streetlamp",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Glass (2) Aquamarine",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/54/Blue_Wrought_Iron_Streetlamp.png"
+  },
+  {
+    "itemID": "Blue, Yellow and Pink Balloon Arch",
+    "name": "Blue, Yellow and Pink Balloon Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Pink Bromeliad (20) Blue Falling Penstemon (20) Yellow Bromeliad (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c8/Blue%2C_Yellow_and_Pink_Balloon_Arch.png"
+  },
+  {
+    "itemID": "Blue, Yellow and Pink Balloon Cluster",
+    "name": "Blue, Yellow and Pink Balloon Cluster",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Pink Bromeliad (8) Blue Falling Penstemon (8) Yellow Bromeliad (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/a5/Blue%2C_Yellow_and_Pink_Balloon_Cluster.png"
+  },
+  {
+    "itemID": "Bountiful Marigold Basket",
+    "name": "Bountiful Marigold Basket",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (1) Soil (10) Hardwood (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/31/Bountiful_Marigold_Basket.png"
+  },
+  {
+    "itemID": "Broken Carved Pillar Base",
+    "name": "Broken Carved Pillar Base",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/88/Broken_Carved_Pillar_Base.png"
+  },
+  {
+    "itemID": "Broken Pillar Base",
+    "name": "Broken Pillar Base",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/ad/Broken_Pillar_Base.png"
+  },
+  {
+    "itemID": "Bromeliad and Marsh Milkweed Pot",
+    "name": "Bromeliad and Marsh Milkweed Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Pink Bromeliad (3) White Marsh Milkweed (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/2b/Bromeliad_and_Marsh_Milkweed_Pot.png"
+  },
+  {
+    "itemID": "Burlap Bags",
+    "name": "Burlap Bags",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (10) Fiber (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c4/Burlap_Bags.png"
+  },
+  {
+    "itemID": "Campfire",
+    "name": "Campfire",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Dry Wood (7) Coal Ore (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/01/Campfire.png"
+  },
+  {
+    "itemID": "Cart",
+    "name": "Cart",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (20) Iron Ingot (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/2b/Cart.png"
+  },
+  {
+    "itemID": "Classic Snowman",
+    "name": "Classic Snowman",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Snowball (10) Carrot Fabric (2) Pebbles (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/87/Classic_Snowman.png"
+  },
+  {
+    "itemID": "Compass Ottoman",
+    "name": "Compass Ottoman",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (8) Iron Ingot (8) Fabric (12) Tinkering Parts (15) Rope (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9b/Compass_Ottoman.png"
+  },
+  {
+    "itemID": "Crate",
+    "name": "Crate",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/4f/Crate.png"
+  },
+  {
+    "itemID": "Daisy and Marsh Milkweed Pot",
+    "name": "Daisy and Marsh Milkweed Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Red Daisy White Marsh Milkweed (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/54/Daisy_and_Marsh_Milkweed_Pot.png"
+  },
+  {
+    "itemID": "Dandelion and Rising Penstemon Pot",
+    "name": "Dandelion and Rising Penstemon Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Dandelion Purple Rising Penstemon",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/26/Dandelion_and_Rising_Penstemon_Pot.png"
+  },
+  {
+    "itemID": "DJ Booth Rig",
+    "name": "DJ Booth Rig",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (100) Topaz (6) Aquamarine (6) Tourmaline (6)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/55/DJ_Booth_Rig.png"
+  },
+  {
+    "itemID": "Elegant Gazebo",
+    "name": "Elegant Gazebo",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (200) Glass (50) Diamond (10) Crystal (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/85/Elegant_Gazebo.png"
+  },
+  {
+    "itemID": "Elegant Town Square Clock",
+    "name": "Elegant Town Square Clock",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (200) Hardwood (100) Gold Ingot (30) Blue Passion Lily (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/95/Elegant_Town_Square_Clock.png"
+  },
+  {
+    "itemID": "Falling Penstemon and Bell Flower Pot",
+    "name": "Falling Penstemon and Bell Flower Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Blue Falling Penstemon White Bell Flower (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/bf/Falling_Penstemon_and_Bell_Flower_Pot.png"
+  },
+  {
+    "itemID": "Festive Pennants",
+    "name": "Festive Pennants",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (5) Fiber (5) Fabric (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9d/Festive_Pennants.png"
+  },
+  {
+    "itemID": "Flower Boxes",
+    "name": "Flower Boxes",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (6) Dandelion (2) Pink Hydrangea (2) Blue Marsh Milkweed (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/02/Flower_Boxes.png"
+  },
+  {
+    "itemID": "Flower Pots",
+    "name": "Flower Pots",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Clay (6) Soil (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fd/Flower_Pots.png"
+  },
+  {
+    "itemID": "Fountain",
+    "name": "Fountain",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (50) Pebbles (20) Gold Ingot (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/89/Fountain.png"
+  },
+  {
+    "itemID": "Granite Fire Bowl",
+    "name": "Granite Fire Bowl",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Broken Sandstone Sand (20) Stone (25) Coal Ore (10) Red Falling Penstemon (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/ce/Granite_Fire_Bowl.png"
+  },
+  {
+    "itemID": "Green Light High Beach Torch",
+    "name": "Green Light High Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Peridot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e7/Green_Light_High_Beach_Torch.png"
+  },
+  {
+    "itemID": "Green Light Low Beach Torch",
+    "name": "Green Light Low Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Peridot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3e/Green_Light_Low_Beach_Torch.png"
+  },
+  {
+    "itemID": "Green Wrought Iron Streetlamp",
+    "name": "Green Wrought Iron Streetlamp",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Glass (2) Emerald",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9f/Green_Wrought_Iron_Streetlamp.png"
+  },
+  {
+    "itemID": "Green, Yellow and White Balloon Arch",
+    "name": "Green, Yellow and White Balloon Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Green Rising Penstemon (20) Dandelion (20) White Daisy (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/5e/Green%2C_Yellow_and_White_Balloon_Arch.png"
+  },
+  {
+    "itemID": "Green, Yellow and White Balloon Cluster",
+    "name": "Green, Yellow and White Balloon Cluster",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Green Rising Penstemon (8) Dandelion (8) White Daisy (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/1b/Green%2C_Yellow_and_White_Balloon_Cluster.png"
+  },
+  {
+    "itemID": "Half-Barrel",
+    "name": "Half-Barrel",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/ce/Half-Barrel.png"
+  },
+  {
+    "itemID": "Haughty Snowman",
+    "name": "Haughty Snowman",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Snowball (10) Crystal Fabric (2) Ruby (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3c/Haughty_Snowman.png"
+  },
+  {
+    "itemID": "Hay Bale",
+    "name": "Hay Bale",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Fiber (10) Wheat (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b9/Hay_Bale.png"
+  },
+  {
+    "itemID": "Hay Bales",
+    "name": "Hay Bales",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Fiber (10) Wheat (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/77/Hay_Bales.png"
+  },
+  {
+    "itemID": "Heavy Wooden Table",
+    "name": "Heavy Wooden Table",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/91/Heavy_Wooden_Table.png"
+  },
+  {
+    "itemID": "Helm Bookshelf",
+    "name": "Helm Bookshelf",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (25) Iron Ingot (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f3/Helm_Bookshelf.png"
+  },
+  {
+    "itemID": "Holiday Feast Chair",
+    "name": "Holiday Feast Chair",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (5) Fabric (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/44/Holiday_Feast_Chair.png"
+  },
+  {
+    "itemID": "Holiday Feast Plate and Cutlery",
+    "name": "Holiday Feast Plate and Cutlery",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Clay (5) Gold Ingot (1) Fabric (1)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e9/Holiday_Feast_Plate_and_Cutlery.png"
+  },
+  {
+    "itemID": "Hydrangea and Bell Flower Pot",
+    "name": "Hydrangea and Bell Flower Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Blue Hydrangea Purple Bell Flower (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9f/Hydrangea_and_Bell_Flower_Pot.png"
+  },
+  {
+    "itemID": "Impatiens and Bromeliad Pot",
+    "name": "Impatiens and Bromeliad Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Purple Impatiens Yellow Bromeliad (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3a/Impatiens_and_Bromeliad_Pot.png"
+  },
+  {
+    "itemID": "Jubilant Topiary",
+    "name": "Jubilant Topiary",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Clay (5) Soil (5) Pink Houseleek (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/25/Jubilant_Topiary.png"
+  },
+  {
+    "itemID": "Kinara",
+    "name": "Kinara",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (3) Soya (7)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/7a/Kinara.png"
+  },
+  {
+    "itemID": "Lamppost with Blue Light",
+    "name": "Lamppost with Blue Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Sapphire",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/13/Lamppost_with_Blue_Light.png"
+  },
+  {
+    "itemID": "Lamppost with Green Light",
+    "name": "Lamppost with Green Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Emerald",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/96/Lamppost_with_Green_Light.png"
+  },
+  {
+    "itemID": "Lamppost with Red Light",
+    "name": "Lamppost with Red Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Garnet",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/01/Lamppost_with_Red_Light.png"
+  },
+  {
+    "itemID": "Lamppost with Yellow Light",
+    "name": "Lamppost with Yellow Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Topaz",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/db/Lamppost_with_Yellow_Light.png"
+  },
+  {
+    "itemID": "Left Signpost",
+    "name": "Left Signpost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/93/Left_Signpost.png"
+  },
+  {
+    "itemID": "Low Sculpted Pillar",
+    "name": "Low Sculpted Pillar",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/19/Low_Sculpted_Pillar.png"
+  },
+  {
+    "itemID": "Mailbox",
+    "name": "Mailbox",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (4) Stone (2) Iron Ingot (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/88/Mailbox.png"
+  },
+  {
+    "itemID": "Menorah",
+    "name": "Menorah",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Gold Ingot (1) Soya (9)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/80/Menorah.png"
+  },
+  {
+    "itemID": "Mickey Mouse Water Tower",
+    "name": "Mickey Mouse Water Tower",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (100) Topaz (10) White Bell Flower (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/23/Mickey_Mouse_Water_Tower.png"
+  },
+  {
+    "itemID": "Mossy Base",
+    "name": "Mossy Base",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b9/Mossy_Base.png"
+  },
+  {
+    "itemID": "Mossy Circle-Carving Stone",
+    "name": "Mossy Circle-Carving Stone",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/b3/Mossy_Circle-Carving_Stone.png"
+  },
+  {
+    "itemID": "Mossy Eye-Carving Stone",
+    "name": "Mossy Eye-Carving Stone",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Soil (25) Stone (50) Clay (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/8c/Mossy_Eye-Carving_Stone.png"
+  },
+  {
+    "itemID": "Nasturtium and Marsh Milkweed Pot",
+    "name": "Nasturtium and Marsh Milkweed Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Yellow Nasturtium Purple Marsh Milkweed",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/a5/Nasturtium_and_Marsh_Milkweed_Pot.png"
+  },
+  {
+    "itemID": "Nautical-Themed Couch",
+    "name": "Nautical-Themed Couch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (10) Iron Ingot (10) Rope (2) Tinkering Parts (15) Fabric (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/62/Nautical-Themed_Couch.png"
+  },
+  {
+    "itemID": "Old Barrel",
+    "name": "Old Barrel",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/ed/Old_Barrel.png"
+  },
+  {
+    "itemID": "Outhouse",
+    "name": "Outhouse",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (20) Hardwood (20) Soil (10) Iron Ingot (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f1/Outhouse.png"
+  },
+  {
+    "itemID": "Painted Wood Table",
+    "name": "Painted Wood Table",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (10) Blue Passion Lily (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9b/Painted_Wood_Table.png"
+  },
+  {
+    "itemID": "Pampas Grass Jug",
+    "name": "Pampas Grass Jug",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (2) Soil (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/76/Pampas_Grass_Jug.png"
+  },
+  {
+    "itemID": "Passion Lily and Houseleek Pot",
+    "name": "Passion Lily and Houseleek Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Orange Houseleek White Passion Lily",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c5/Passion_Lily_and_Houseleek_Pot.png"
+  },
+  {
+    "itemID": "Photo Backdrop",
+    "name": "Photo Backdrop",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (20) Tinkering Parts (9) Fabric (10) Glass (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/0/07/Photo_Backdrop.png"
+  },
+  {
+    "itemID": "Pink and Blue Flower Disk",
+    "name": "Pink and Blue Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area Purple Impatiens (2) Blue Star Lily (2) Pink Bromeliad",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/22/Pink_and_Blue_Flower_Disk.png"
+  },
+  {
+    "itemID": "Pink, Blue and Purple Flower Rectangle",
+    "name": "Pink, Blue and Purple Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area Pink Houseleek Blue Marsh Milkweed (2) Purple Impatiens (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/81/Pink%2C_Blue_and_Purple_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Pink, Red and Purple Flower Rectangle",
+    "name": "Pink, Red and Purple Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area Purple Hydrangea (2) Orange Marsh Milkweed (3) Red Bell Flower (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/2c/Pink%2C_Red_and_Purple_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Pink, Yellow and Black Flower Disk",
+    "name": "Pink, Yellow and Black Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area Pink Houseleek Orange Star Lily (2) Red Nasturtium",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9e/Pink%2C_Yellow_and_Black_Flower_Disk.png"
+  },
+  {
+    "itemID": "Pirate Map on the Wall",
+    "name": "Pirate Map on the Wall",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (2) Gold Nugget (2) Fabric (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/ad/Pirate_Map_on_the_Wall.png"
+  },
+  {
+    "itemID": "Playful Pumpkin Scarecrow",
+    "name": "Playful Pumpkin Scarecrow",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (10) Fabric (10) Wheat (20) Pumpkin",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/91/Playful_Pumpkin_Scarecrow.png"
+  },
+  {
+    "itemID": "Purple Wrought Iron Streetlamp",
+    "name": "Purple Wrought Iron Streetlamp",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Glass (2) Amethyst",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/87/Purple_Wrought_Iron_Streetlamp.png"
+  },
+  {
+    "itemID": "Purple, Pink and Yellow Flower Disk",
+    "name": "Purple, Pink and Yellow Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area Pink Hydrangea (2) Purple Bell Flower (2) Yellow Daisy",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/73/Purple%2C_Pink_and_Yellow_Flower_Disk.png"
+  },
+  {
+    "itemID": "Rectangular Soil Area",
+    "name": "Rectangular Soil Area",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (8) Soil (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c8/Rectangular_Soil_Area.png"
+  },
+  {
+    "itemID": "Red and Black Passion Lily Pot",
+    "name": "Red and Black Passion Lily Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Red Passion Lily Black Passion Lily",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/5b/Red_and_Black_Passion_Lily_Pot.png"
+  },
+  {
+    "itemID": "Red and Yellow Flower Disk",
+    "name": "Red and Yellow Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area Dandelion (2) White Daisy Red Falling Penstemon (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e8/Red_and_Yellow_Flower_Disk.png"
+  },
+  {
+    "itemID": "Red Light High Beach Torch",
+    "name": "Red Light High Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Ruby",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/9e/Red_Light_High_Beach_Torch.png"
+  },
+  {
+    "itemID": "Red Light Low Beach Torch",
+    "name": "Red Light Low Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Ruby",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/83/Red_Light_Low_Beach_Torch.png"
+  },
+  {
+    "itemID": "Red, Blue and Green Flower Rectangle",
+    "name": "Red, Blue and Green Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area Green Passion Lily (2) Blue Falling Penstemon (2) Orange Nasturtium (4)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/10/Red%2C_Blue_and_Green_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Red, White and Purple Flower Rectangle",
+    "name": "Red, White and Purple Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area Red Bromeliad (2) White Impatiens (2) Purple Rising Penstemon (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/83/Red%2C_White_and_Purple_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Red, Yellow and Black Balloon Cluster",
+    "name": "Red, Yellow and Black Balloon Cluster",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Red Nasturtium (8) Yellow Nasturtium (8) Black Passion Lily (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/55/Red%2C_Yellow_and_Black_Balloon_Cluster.png"
+  },
+  {
+    "itemID": "Refreshment Chest",
+    "name": "Refreshment Chest",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (15) Iron Ingot (10) Gold Nugget (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/55/Refreshment_Chest.png"
+  },
+  {
+    "itemID": "Right Signpost",
+    "name": "Right Signpost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (5) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/31/Right_Signpost.png"
+  },
+  {
+    "itemID": "Round Blue Three-Pronged Lamppost",
+    "name": "Round Blue Three-Pronged Lamppost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (4) Glass (3) Sapphire (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e1/Round_Blue_Three-Pronged_Lamppost.png"
+  },
+  {
+    "itemID": "Round Lamppost with Blue Light",
+    "name": "Round Lamppost with Blue Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Sapphire",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e0/Round_Lamppost_with_Blue_Light.png"
+  },
+  {
+    "itemID": "Round Lamppost with Orange Light",
+    "name": "Round Lamppost with Orange Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Citrine",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/8b/Round_Lamppost_with_Orange_Light.png"
+  },
+  {
+    "itemID": "Round Lamppost with Pink Light",
+    "name": "Round Lamppost with Pink Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Tourmaline",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/99/Round_Lamppost_with_Pink_Light.png"
+  },
+  {
+    "itemID": "Round Lamppost with White Light",
+    "name": "Round Lamppost with White Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (3) Glass Diamond",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/8f/Round_Lamppost_with_White_Light.png"
+  },
+  {
+    "itemID": "Round Orange Three-Pronged Lamppost",
+    "name": "Round Orange Three-Pronged Lamppost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (4) Glass (3) Citrine (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/30/Round_Orange_Three-Pronged_Lamppost.png"
+  },
+  {
+    "itemID": "Round Pink Three-Pronged Lamppost",
+    "name": "Round Pink Three-Pronged Lamppost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (4) Glass (3) Tourmaline (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/ee/Round_Pink_Three-Pronged_Lamppost.png"
+  },
+  {
+    "itemID": "Round Soil Area",
+    "name": "Round Soil Area",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (5) Soil (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3f/Round_Soil_Area.png"
+  },
+  {
+    "itemID": "Round White Three-Pronged Lamppost",
+    "name": "Round White Three-Pronged Lamppost",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (4) Glass (3) Diamond (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3c/Round_White_Three-Pronged_Lamppost.png"
+  },
+  {
+    "itemID": "Rustic Clock Tower",
+    "name": "Rustic Clock Tower",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (100) Hardwood (100) Iron Ingot (30) Clay (200)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/d7/Rustic_Clock_Tower.png"
+  },
+  {
+    "itemID": "Rustic Wooden Case",
+    "name": "Rustic Wooden Case",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f6/Rustic_Wooden_Case.png"
+  },
+  {
+    "itemID": "Sack",
+    "name": "Sack",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Fiber (15) Soil (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/61/Sack.png"
+  },
+  {
+    "itemID": "Scrooge McDuck's Store Sign",
+    "name": "Scrooge McDuck's Store Sign",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/52/Scrooge_McDuck%27s_Store_Sign.png"
+  },
+  {
+    "itemID": "Ship Coffee Table",
+    "name": "Ship Coffee Table",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (10) Iron Ingot (10) Tinkering Parts (15)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/b/bf/Ship_Coffee_Table.png"
+  },
+  {
+    "itemID": "Short Birdhouse",
+    "name": "Short Birdhouse",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (8) Yellow Bromeliad (3) Pink Hydrangea (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fc/Short_Birdhouse.png"
+  },
+  {
+    "itemID": "Snow Hut",
+    "name": "Snow Hut",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Snowball (100)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c4/Snow_Hut.png"
+  },
+  {
+    "itemID": "Snow Kid",
+    "name": "Snow Kid",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Snowball (8) Carrot Fabric (2) Pebbles (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/58/Snow_Kid.png"
+  },
+  {
+    "itemID": "Snow Lady",
+    "name": "Snow Lady",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Snowball (10) Carrot Fabric (2) Pebbles (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/6a/Snow_Lady.png"
+  },
+  {
+    "itemID": "Stack of Firewood",
+    "name": "Stack of Firewood",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/92/Stack_of_Firewood.png"
+  },
+  {
+    "itemID": "Stall",
+    "name": "Stall",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Hardwood (20) Iron Ingot (3) Fabric (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e9/Stall.png"
+  },
+  {
+    "itemID": "Star Lily and Falling Penstemon Pot",
+    "name": "Star Lily and Falling Penstemon Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Blue Star Lily White & Pink Falling Penstemon",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/83/Star_Lily_and_Falling_Penstemon_Pot.png"
+  },
+  {
+    "itemID": "Stellar Blue DJ Booth",
+    "name": "Stellar Blue DJ Booth",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (100) Iron Ingot (50) Blue Hydrangea (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/24/Stellar_Blue_DJ_Booth.png"
+  },
+  {
+    "itemID": "Stellar Pink DJ Booth",
+    "name": "Stellar Pink DJ Booth",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (100) Iron Ingot (50) Pink Hydrangea (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fb/Stellar_Pink_DJ_Booth.png"
+  },
+  {
+    "itemID": "Stone Well",
+    "name": "Stone Well",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (20) Stone (50) Fiber (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/8/86/Stone_Well.png"
+  },
+  {
+    "itemID": "Stitch's Television",
+    "name": "Stitch's Television",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Tinkering Parts (12) Gold Ingot (5) Glass (5)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/a/a5/Stitch%27s_Television.png"
+  },
+  {
+    "itemID": "Sturdy Chair",
+    "name": "Sturdy Chair",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/41/Sturdy_Chair.png"
+  },
+  {
+    "itemID": "Sunflower and Daisy Pot",
+    "name": "Sunflower and Daisy Pot",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Flower Pots Yellow Daisy (2) Sunflower",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/39/Sunflower_and_Daisy_Pot.png"
+  },
+  {
+    "itemID": "Swimming Pool",
+    "name": "Swimming Pool",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (300) Softwood (50) White Daisy (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/ce/Swimming_Pool.png"
+  },
+  {
+    "itemID": "Tall Birdhouse",
+    "name": "Tall Birdhouse",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (8) Blue Falling Penstemon (3) White Daisy (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/7b/Tall_Birdhouse.png"
+  },
+  {
+    "itemID": "Tool Rack",
+    "name": "Tool Rack",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (10) Iron Ingot (4) Soil (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e6/Tool_Rack.png"
+  },
+  {
+    "itemID": "Tree of Holiday Cheer",
+    "name": "Tree of Holiday Cheer",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Glass (15) Fabric (10) Sugarcane (25) Topaz (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/7a/Tree_of_Holiday_Cheer.png"
+  },
+  {
+    "itemID": "Trellis",
+    "name": "Trellis",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (15) Soil (3) White & Pink Falling Penstemon (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e1/Trellis.png"
+  },
+  {
+    "itemID": "Trellis Arch",
+    "name": "Trellis Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (15) Soil (3) White & Pink Falling Penstemon (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/26/Trellis_Arch.png"
+  },
+  {
+    "itemID": "White, Red and Purple Flower Disk",
+    "name": "White, Red and Purple Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area White Impatiens (2) Purple Rising Penstemon (2) Orange & Red Marsh Milkweed (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c5/White%2C_Red_and_Purple_Flower_Disk.png"
+  },
+  {
+    "itemID": "White, Yellow and Black Balloon Arch",
+    "name": "White, Yellow and Black Balloon Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Sunflower (20) Black Passion Lily (20) White Marsh Milkweed (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/90/White%2C_Yellow_and_Black_Balloon_Arch.png"
+  },
+  {
+    "itemID": "White, Yellow and Black Balloon Cluster",
+    "name": "White, Yellow and Black Balloon Cluster",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (5) Sunflower (8) Black Passion Lily (8) White Marsh Milkweed (8)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/5/50/White%2C_Yellow_and_Black_Balloon_Cluster.png"
+  },
+  {
+    "itemID": "Wide Arched Window",
+    "name": "Wide Arched Window",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dark Wood (20) Glass (12) Gold Nugget (10)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/1/12/Wide_Arched_Window.png"
+  },
+  {
+    "itemID": "Wooden Bucket",
+    "name": "Wooden Bucket",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (3) Iron Ingot",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/c/c1/Wooden_Bucket.png"
+  },
+  {
+    "itemID": "Wooden Lamppost with Blue Light",
+    "name": "Wooden Lamppost with Blue Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (4) Glass Iron Ingot (2) Blue Zircon",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/d1/Wooden_Lamppost_with_Blue_Light.png"
+  },
+  {
+    "itemID": "Wooden Lamppost with Green Light",
+    "name": "Wooden Lamppost with Green Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (4) Glass Iron Ingot (2) Emerald",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fd/Wooden_Lamppost_with_Green_Light.png"
+  },
+  {
+    "itemID": "Wooden Lamppost with Pink Light",
+    "name": "Wooden Lamppost with Pink Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (4) Glass Iron Ingot (2) Tourmaline",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e4/Wooden_Lamppost_with_Pink_Light.png"
+  },
+  {
+    "itemID": "Wooden Lamppost with Yellow Light",
+    "name": "Wooden Lamppost with Yellow Light",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Dry Wood (4) Glass Iron Ingot (2) Topaz",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/72/Wooden_Lamppost_with_Yellow_Light.png"
+  },
+  {
+    "itemID": "Wooden Table",
+    "name": "Wooden Table",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (20) Fabric (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/f4/Wooden_Table.png"
+  },
+  {
+    "itemID": "Wrought Iron Arch",
+    "name": "Wrought Iron Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Fabric (4)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/6/6a/Wrought_Iron_Arch.png"
+  },
+  {
+    "itemID": "Yellow and White Flower Rectangle",
+    "name": "Yellow and White Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area White Daisy (2) Yellow Bromeliad Orange Star Lily (3)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/4/4f/Yellow_and_White_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Yellow Light High Beach Torch",
+    "name": "Yellow Light High Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Topaz",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/7/79/Yellow_Light_High_Beach_Torch.png"
+  },
+  {
+    "itemID": "Yellow Light Low Beach Torch",
+    "name": "Yellow Light Low Beach Torch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Softwood (5) Fiber (5) Sand (3) Topaz",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/d/de/Yellow_Light_Low_Beach_Torch.png"
+  },
+  {
+    "itemID": "Yellow, Green and Purple Flower Rectangle",
+    "name": "Yellow, Green and Purple Flower Rectangle",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Rectangular Soil Area Purple Falling Penstemon (2) Dandelion (2) Green Rising Penstemon (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/f/fb/Yellow%2C_Green_and_Purple_Flower_Rectangle.png"
+  },
+  {
+    "itemID": "Yellow, Red and Black Balloon Arch",
+    "name": "Yellow, Red and Black Balloon Arch",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Iron Ingot (10) Red Nasturtium (20) Black Passion Lily (20) Yellow Nasturtium (20)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/9/98/Yellow%2C_Red_and_Black_Balloon_Arch.png"
+  },
+  {
+    "itemID": "Yellow, Red and Blue Flower Disk",
+    "name": "Yellow, Red and Blue Flower Disk",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Round Soil Area Blue Passion Lily (4) Red Bell Flower (2) Sunflower (4)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/e/e8/Yellow%2C_Red_and_Blue_Flower_Disk.png"
+  },
+  {
+    "itemID": "Yule Goat",
+    "name": "Yule Goat",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Wheat (50) Fabric (2)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/3/3b/Yule_Goat.png"
+  },
+  {
+    "itemID": "Zen Garden",
+    "name": "Zen Garden",
+    "description": "",
+    "buyPrice": "",
+    "sellPrice": "",
+    "soldAt": "",
+    "craftingRecipe": "Stone (100) Pebbles (100) Sand (200)",
+    "imageUrl": "https://dreamlightvalleywiki.com/images/2/21/Zen_Garden.png"
+  }
+]
