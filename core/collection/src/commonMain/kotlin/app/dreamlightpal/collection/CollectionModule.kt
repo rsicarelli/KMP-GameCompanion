@@ -1,6 +1,5 @@
 package app.dreamlightpal.collection
 
-import app.dreamlightpal.collection.data.CollectionRepositoryImpl
 import app.dreamlightpal.collection.domain.SyncCollectionUseCase
 import app.dreamlightpal.collection.domain.model.ClothingRepository
 import app.dreamlightpal.collection.domain.model.ClothingRepositoryImpl
@@ -30,7 +29,6 @@ import app.dreamlightpal.collection.domain.model.MotifRepository
 import app.dreamlightpal.collection.domain.model.MotifRepositoryImpl
 import app.dreamlightpal.collection.domain.model.WallpaperRepository
 import app.dreamlightpal.collection.domain.model.WallpaperRepositoryImpl
-import app.dreamlightpal.collection.domain.repository.CollectionRepository
 import org.kodein.di.DI
 import org.kodein.di.bind
 import org.kodein.di.factory
@@ -38,7 +36,7 @@ import org.kodein.di.instance
 import org.kodein.di.singleton
 
 val CollectionModule = DI.Module("Collection") {
-    bind<CollectionRepository>() with singleton { CollectionRepositoryImpl(instance()) }
+//    bind<CollectionRepository>() with singleton { CollectionRepositoryImpl(instance()) }
     bind<SyncCollectionUseCase>() with factory { SyncCollectionUseCase(instance()) }
     bind<MealRepository>() with singleton { MealRepositoryImpl(instance()) }
     bind<ClothingRepository>() with singleton { ClothingRepositoryImpl(instance()) }

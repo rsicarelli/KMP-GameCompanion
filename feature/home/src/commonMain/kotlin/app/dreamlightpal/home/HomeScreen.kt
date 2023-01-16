@@ -85,11 +85,11 @@ fun HomeScreen(
         HomeComponentHolder(componentContext, listComponentFactory, detailComponentFactory)
     }
 
-    /*Content(
+    Content(
         homeComponent = homeComponent,
         isDarkMode = isDarkMode,
         onToggleTheme = onToggleTheme
-    )*/
+    )
 }
 
 @Composable
