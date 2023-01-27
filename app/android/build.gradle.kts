@@ -1,17 +1,15 @@
-import decorators.configureAndroidApp
-
 plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jetbrains.compose")
-    id("app.dreamlightpal.gradle")
+//    id("app.dreamlightpal.gradle")
 }
-
-configureAndroidApp(
-    applicationId = "app.dreamlightpal",
-    versionCode = 1,
-    versionName = "1.0.0"
-)
+//
+//configureAndroidApp(
+//    applicationId = "app.dreamlightpal",
+//    versionCode = 1,
+//    versionName = "1.0.0"
+//)
 
 dependencies {
     implementation(projects.core.collection)

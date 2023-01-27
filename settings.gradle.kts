@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
+import Settings_gradle.ProjectDefaults.VersionCatalogModule
+import Settings_gradle.ProjectDefaults.VersionCatalogName
 import org.gradle.api.internal.FeaturePreviews.Feature.TYPESAFE_PROJECT_ACCESSORS
 
 enableFeaturePreview(TYPESAFE_PROJECT_ACCESSORS.name)
@@ -9,26 +11,36 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         google()
+        mavenLocal()
     }
 
-    includeBuild("build-logic")
+    //    includeBuild("build-logic")
 }
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 
     repositories {
+        mavenLocal()
         gradlePluginPortal()
         mavenCentral()
         google()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://jitpack.io")
     }
+
+    versionCatalogs {
+        create(VersionCatalogName).from(VersionCatalogModule)
+    }
 }
 
 private object ProjectDefaults {
 
     const val name: String = "DreamlightPal"
+    private const val VersionCatalogVersion = "0.1"
+    const val VersionCatalogModule = "com.rsicarelli.kmplatform:versioncatalog:$VersionCatalogVersion"
+    const val VersionCatalogName = "libs"
+
     val appModules = sequenceOf(
         "android", "desktop"
     ).map { ":app:$it" }.asIterable()
@@ -60,7 +72,7 @@ with(ProjectDefaults) {
             )
         }
     }
-    include(appModules)
-    include(coreModules)
-    include(featureModules)
+//    include(appModules)
+//    include(coreModules)
+//    include(featureModules)
 }
