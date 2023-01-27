@@ -21,34 +21,32 @@ plugins {
     alias(libs.plugins.rsicarelli.kmplatform)
 }
 
-group = "com.rsicarelli.dreamlightpal"
-
 installDefaults(
     desktopAppConfig = DesktopAppConfig(
         mainClass = "app.dreamlightpal.MainKt",
         packageName = "DreamlightPal",
         packageVersion = "1.0.0",
         description = "todo",
-        copyright = "© 2022 rsicarelli. All rights reserved.",
+        copyright = "© 2023 rsicarelli. All rights reserved.",
         vendor = "rsicarelli",
-        resourceRootPath = "",
+        resourceRootPath = "a",
         targetFormats = listOf(
             TargetFormat.Dmg,
             TargetFormat.Msi,
             TargetFormat.Deb
         ),
         windowsConfig = DesktopAppConfig.WindowsConfig(
-            iconPath = "",
-            upgradeUuid = "",
+            iconPath = "//todo",
+            upgradeUuid = "//todo",
             menuGroup = "DreamlightPal",
             perUserInstall = true
         ),
         macOSConfig = DesktopAppConfig.MacOSConfig(
-            iconPath = "",
+            iconPath = "//todo",
             bundleID = "app.dreamlightpal",
         ),
         linuxConfig = DesktopAppConfig.LinuxConfig(
-            iconPath = ""
+            iconPath = "//todo"
         )
     )
 )

@@ -14,8 +14,8 @@ plugins {
 dependencies {
     implementation(projects.core.collection)
     implementation(projects.core.designSystem)
-    implementation(projects.core.logger)
-    implementation(projects.core.threading)
+    implementation(libs.rsicarelli.kmplatform.logger)
+    implementation(libs.rsicarelli.kmplatform.threading)
 
     implementation(projects.feature.home)
     implementation(projects.feature.list)

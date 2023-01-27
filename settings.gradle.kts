@@ -13,8 +13,6 @@ pluginManagement {
         google()
         mavenLocal()
     }
-
-    //    includeBuild("build-logic")
 }
 
 dependencyResolutionManagement {
@@ -42,11 +40,11 @@ private object ProjectDefaults {
     const val VersionCatalogName = "libs"
 
     val appModules = sequenceOf(
-        "android", "desktop"
+        "desktop"
     ).map { ":app:$it" }.asIterable()
 
     val coreModules = sequenceOf(
-//        "collection",
+        "collection",
         "designSystem",
     ).map { ":core:$it" }.asIterable()
 
@@ -64,15 +62,7 @@ private object ProjectDefaults {
 
 with(ProjectDefaults) {
     rootProject.name = name
-    rootDir.run {
-        sharedFiles.forEach { path ->
-            resolve(path).copyTo(
-                rootDir.resolve("build-logic").resolve(path),
-                overwrite = true
-            )
-        }
-    }
-//    include(appModules)
+        include(appModules)
     include(coreModules)
-//    include(featureModules)
+        include(featureModules)
 }
