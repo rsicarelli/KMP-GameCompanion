@@ -46,8 +46,8 @@ private object ProjectDefaults {
     ).map { ":app:$it" }.asIterable()
 
     val coreModules = sequenceOf(
-        "collection", "designSystem",
-        "logger", "threading"
+//        "collection",
+        "designSystem",
     ).map { ":core:$it" }.asIterable()
 
     val featureModules = sequenceOf(
@@ -73,6 +73,6 @@ with(ProjectDefaults) {
         }
     }
 //    include(appModules)
-//    include(coreModules)
+    include(coreModules)
 //    include(featureModules)
 }
