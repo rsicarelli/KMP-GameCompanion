@@ -40,7 +40,7 @@ private object ProjectDefaults {
     const val VersionCatalogName = "libs"
 
     val appModules = sequenceOf(
-        "desktop"
+        "android", "desktop"
     ).map { ":app:$it" }.asIterable()
 
     val coreModules = sequenceOf(

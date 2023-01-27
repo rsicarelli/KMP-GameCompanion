@@ -1,15 +1,10 @@
 @file:Suppress("DSL_SCOPE_VIOLATION")
 
-import config.DesktopAppConfig
-
-
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
     alias(libs.plugins.rsicarelli.kmplatform)
 }
-
-group = "app.dreamlighpal"
 
 installDesktopApp(
     jvmDependencyHandler = {

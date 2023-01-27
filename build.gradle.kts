@@ -1,5 +1,6 @@
 @file:Suppress("DSL_SCOPE_VIOLATION")
 
+import config.AndroidConfig
 import config.DesktopAppConfig
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
@@ -17,11 +18,21 @@ buildscript {
     }
 }
 
+group = "app.dreamlightpal"
+
 plugins {
     alias(libs.plugins.rsicarelli.kmplatform)
 }
 
 installDefaults(
+    androidAppConfig = AndroidConfig.AndroidAppConfig(
+        id = "app.dreamlightpal",
+        version = AndroidConfig.AndroidAppConfig.Version(
+            code = 1,
+            name = "0.1",
+        ),
+        splits = null
+    ),
     desktopAppConfig = DesktopAppConfig(
         mainClass = "app.dreamlightpal.MainKt",
         packageName = "DreamlightPal",

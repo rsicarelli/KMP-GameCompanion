@@ -1,30 +1,28 @@
+@file:Suppress("DSL_SCOPE_VIOLATION")
+
 plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jetbrains.compose")
-//    id("app.dreamlightpal.gradle")
+    alias(libs.plugins.rsicarelli.kmplatform)
 }
+
+installAndroidApp()
 //
-//configureAndroidApp(
-//    applicationId = "app.dreamlightpal",
-//    versionCode = 1,
-//    versionName = "1.0.0"
-//)
-
-dependencies {
-    implementation(projects.core.collection)
-    implementation(projects.core.designSystem)
-    implementation(libs.rsicarelli.kmplatform.logger)
-    implementation(libs.rsicarelli.kmplatform.threading)
-
-    implementation(projects.feature.home)
-    implementation(projects.feature.list)
-    implementation(projects.feature.detail)
-
-    implementation(libs.androidx.core)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.kodein.di)
-    implementation(libs.kodein.di.framework.compose)
-    implementation(libs.arkivanov.decompose)
-    implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
-}
+//dependencies {
+//    implementation(projects.core.collection)
+//    implementation(projects.core.designSystem)
+//    implementation(libs.rsicarelli.kmplatform.logger)
+//    implementation(libs.rsicarelli.kmplatform.threading)
+//
+//    implementation(projects.feature.home)
+//    implementation(projects.feature.list)
+//    implementation(projects.feature.detail)
+//
+//    implementation(libs.androidx.core)
+//    implementation(libs.androidx.activity.compose)
+//    implementation(libs.kodein.di)
+//    implementation(libs.kodein.di.framework.compose)
+//    implementation(libs.arkivanov.decompose)
+//    implementation(libs.arkivanov.decompose.extensions.compose.jetbrains)
+//}
