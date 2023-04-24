@@ -10,7 +10,7 @@ installDesktopApp(
     jvmDependencyHandler = {
         implementation(compose.dependencies.desktop.currentOs)
 
-//        implementation(projects.core.collection)
+        implementation(projects.core.collection)
         implementation(projects.core.designSystem)
         implementation(libs.rsicarelli.kmplatform.logger)
         implementation(libs.rsicarelli.kmplatform.threading)

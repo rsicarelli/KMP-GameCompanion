@@ -35,7 +35,7 @@ dependencyResolutionManagement {
 private object ProjectDefaults {
 
     const val name: String = "DreamlightPal"
-    private const val VersionCatalogVersion = "0.1-dev02"
+    private const val VersionCatalogVersion = "0.2-dev01"
     const val VersionCatalogModule = "com.rsicarelli.kmplatform:versioncatalog:$VersionCatalogVersion"
     const val VersionCatalogName = "libs"
 

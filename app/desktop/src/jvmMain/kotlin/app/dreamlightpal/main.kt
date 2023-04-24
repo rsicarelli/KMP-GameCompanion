@@ -12,10 +12,10 @@ import app.dreamlightpal.collection.CollectionModule
 import app.dreamlightpal.detail.DetailModule
 import app.dreamlightpal.home.HomeScreen
 import app.dreamlightpal.list.ListModule
-import app.dreamlightpal.threading.ThreadingModule
 import app.dreamlightpal.ui.theme.DreamlightPalTheme
 import com.arkivanov.decompose.DefaultComponentContext
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
+import com.rsicarelli.kmplatform.threading.ThreadingModule
 import org.kodein.di.DI
 
 fun main() = singleWindowApplication(
