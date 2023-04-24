@@ -40,12 +40,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.dreamlightpal.compose.rememberAsyncImagePainter
-import app.dreamlightpal.compose.statusBarPadding
 import app.dreamlightpal.list.ListComponent.ListState
 import app.dreamlightpal.list.ListScreenTokens.GridArrangement
 import app.dreamlightpal.list.ListScreenTokens.GridColumns
 import app.dreamlightpal.list.ListScreenTokens.GridPaddingValues
+import com.rsicarelli.kmplatform.copan.compose.rememberAsyncImagePainter
+import com.rsicarelli.kmplatform.copan.compose.statusBarPadding
 
 @Composable
 fun ListScreen(

@@ -23,6 +23,7 @@ installMultiplatformLibrary(
         )
     ),
     commonMainDependencies = {
+        api(compose.dependencies.material3)
         api(libs.rsicarelli.kmplatform.copan)
     }
 )

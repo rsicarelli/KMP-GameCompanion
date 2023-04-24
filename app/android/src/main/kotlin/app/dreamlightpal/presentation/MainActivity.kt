@@ -9,9 +9,9 @@ import app.dreamlightpal.collection.CollectionModule
 import app.dreamlightpal.detail.DetailModule
 import app.dreamlightpal.home.HomeScreen
 import app.dreamlightpal.list.ListModule
-import app.dreamlightpal.threading.ThreadingModule
 import app.dreamlightpal.ui.theme.DreamlightPalTheme
 import com.arkivanov.decompose.defaultComponentContext
+import com.rsicarelli.kmplatform.threading.ThreadingModule
 import org.kodein.di.DI
 import org.kodein.di.DIAware
 

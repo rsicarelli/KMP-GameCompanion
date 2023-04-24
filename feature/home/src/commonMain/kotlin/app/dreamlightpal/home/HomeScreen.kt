@@ -53,8 +53,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.dreamlightpal.collection.domain.model.MealRepository
-import app.dreamlightpal.compose.navigationBarPadding
-import app.dreamlightpal.compose.rememberAsyncImagePainter
 import app.dreamlightpal.detail.DetailComponentFactory
 import app.dreamlightpal.detail.DetailScreen
 import app.dreamlightpal.home.HomeScreenDefaults.FullScreenWeight
@@ -68,6 +66,8 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.value.Value
+import com.rsicarelli.kmplatform.copan.compose.navigationBarPadding
+import com.rsicarelli.kmplatform.copan.compose.rememberAsyncImagePainter
 import org.kodein.di.DI
 import org.kodein.di.compose.rememberInstance
 import org.kodein.di.compose.withDI

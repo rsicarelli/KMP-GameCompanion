@@ -1,12 +1,5 @@
 package app.dreamlightpal.compose.resource
 
-import androidx.compose.runtime.Stable
+import com.rsicarelli.kmplatform.copan.compose.resource.CopanResource
 
-//@Stable
-//interface PlatformResource {
-//
-//    val resId: Int?
-//    val fileName: String?
-//}
-//
-//expect val SpikeBackground: PlatformResource
+expect val SpikeBackground: CopanResource

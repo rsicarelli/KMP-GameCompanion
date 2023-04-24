@@ -1,6 +1,5 @@
 package app.dreamlightpal.collection.data
 
-import app.dreamlightpal.DreamlightPal
 import com.squareup.sqldelight.db.SqlDriver
 import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
 import java.io.File

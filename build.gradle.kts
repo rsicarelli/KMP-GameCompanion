@@ -47,17 +47,17 @@ installDefaults(
             TargetFormat.Deb
         ),
         windowsConfig = DesktopAppConfig.WindowsConfig(
-            iconPath = "//todo",
+            iconPath = "ic-launcher.ico",
             upgradeUuid = "//todo",
             menuGroup = "DreamlightPal",
             perUserInstall = true
         ),
         macOSConfig = DesktopAppConfig.MacOSConfig(
-            iconPath = "//todo",
+            iconPath = "ic-launcher.png",
             bundleID = "app.dreamlightpal",
         ),
         linuxConfig = DesktopAppConfig.LinuxConfig(
-            iconPath = "//todo"
+            iconPath = "ic-launcher.icns"
         )
     )
 )

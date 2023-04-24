@@ -6,7 +6,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import app.dreamlightpal.compose.StatusBarColorEffect
+import com.rsicarelli.kmplatform.copan.compose.StatusBarColorEffect
 
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,

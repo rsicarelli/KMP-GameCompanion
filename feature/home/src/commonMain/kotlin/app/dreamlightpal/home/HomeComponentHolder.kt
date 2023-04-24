@@ -12,7 +12,6 @@ import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.value.MutableValue
 import com.arkivanov.decompose.value.Value
-import com.arkivanov.decompose.value.reduce
 
 @Stable
 interface HomeComponent {
@@ -52,7 +51,7 @@ class HomeComponentHolder(
     override val models: Value<HomeComponent.Model> = _models
 
     override fun setMultiPane(isMultiPane: Boolean) {
-        _models.reduce { it.copy(isMultiPane = isMultiPane) }
+        _models.compareAndSet(models.value, models.value.copy(isMultiPane = isMultiPane))
     }
 
     override val listStack: Value<ChildStack<*, HomeComponent.ListFeatureStack>> = listRouter.stack

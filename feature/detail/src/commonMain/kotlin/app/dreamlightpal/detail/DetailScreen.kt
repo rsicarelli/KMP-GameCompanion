@@ -23,11 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.dreamlightpal.compose.rememberAsyncImagePainter
-import app.dreamlightpal.compose.resource.SpikeBackground
+import com.rsicarelli.kmplatform.copan.compose.rememberAsyncImagePainter
+import com.rsicarelli.kmplatform.copan.compose.rememberCopanResourcePainter
+import com.rsicarelli.kmplatform.copan.compose.resource.SpikeBackground
 
 @Composable
 fun DetailScreen(
@@ -59,7 +59,7 @@ fun DetailScreen(
 
             Image(
                 modifier = Modifier.fillMaxWidth().padding(top = 24.dp),
-                painter = painterResource(SpikeBackground.fileName.toString()),
+                painter = rememberCopanResourcePainter(SpikeBackground),
                 colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.background),
                 contentDescription = null,
             )
@@ -84,7 +84,7 @@ fun DetailScreen(
         }
 
     }
-    //    V1(modifier, isSplitScreen)
+    V1(modifier, isSplitScreen)
 }
 
 @Composable
@@ -96,7 +96,7 @@ private fun V1(modifier: Modifier, isSplitScreen: Boolean) {
             modifier = Modifier.fillMaxWidth(fraction = 0.3F).fillMaxHeight()
         ) {
             Image(
-                painter = rememberAsyncImagePainter(SpikeBackground),
+                painter = rememberAsyncImagePainter(SpikeBackground.desktopRes!!),
                 contentDescription = null,
             )
             Box(modifier = Modifier.background(Color(0xff20256E)).padding(16.dp)) {

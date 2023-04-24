@@ -17,7 +17,7 @@ installMultiplatformLibrary(
     ),
     commonMainDependencies = {
         compileOnly(projects.core.designSystem)
-        compileOnly(projects.core.collection)
+//        compileOnly(projects.core.collection)
         compileOnly(libs.kodein.di)
         compileOnly(libs.arkivanov.decompose)
         compileOnly(libs.arkivanov.decompose.extensions.compose.jetbrains)

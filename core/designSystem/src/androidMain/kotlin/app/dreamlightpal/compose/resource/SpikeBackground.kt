@@ -1,9 +1,13 @@
 package app.dreamlightpal.compose.resource
 
-import app.dreamlightpal.designSystem.R
+import app.dreamlightpal.core.designSystem.R
+import com.rsicarelli.kmplatform.copan.compose.resource.AndroidRes
+import com.rsicarelli.kmplatform.copan.compose.resource.CopanResource
+import com.rsicarelli.kmplatform.copan.compose.resource.DesktopRes
 
-actual val SpikeBackground: PlatformResource
-    get() = object : PlatformResource {
-        override val resId: Int = R.drawable.background_spike_white
-        override val fileName: String? = null
+actual val SpikeBackground: CopanResource
+    get() = object : CopanResource {
+        override val androidRes: AndroidRes
+            get() = R.drawable.background_spike_white
+        override val desktopRes: DesktopRes? = null
     }
